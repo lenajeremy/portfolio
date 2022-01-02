@@ -17,7 +17,7 @@ export const Header: React.FC = () => {
 
   return (
     <React.Fragment>
-      <header className="header flex md:py-16 justify-between md:px-32 p-10">
+      <header className="header flex md:py-8 justify-between md:px-32 p-10">
         <Link to="/">
           <motion.div
             style={{ scale, x: translateX }}

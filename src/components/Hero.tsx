@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
   useEffect(() => {}, [])
 
   return (
-    <div className="hero grid md:grid-cols-2 gap-4 h-3/4 text-center md:text-left">
+    <div className="hero grid md:grid-cols-2 gap-4 h-3/4 text-center md:text-left content-center">
       <div className="absolute blurred-blob bg-green-300 rounded-full filter blur-3xl"></div>
       <div className="absolute blurred-blob rounded-full filter blur-3xl"></div>
       <div className="absolute blurred-blob rounded-full filter blur-3xl"></div>

@@ -16,7 +16,7 @@ body{
 
 @media (prefers-color-scheme:dark) {
     body{
-        background-color: rgba(31, 31, 31, 0.863);
+        background-color: black;
     }
 
     .blurred-blob{
@@ -28,7 +28,7 @@ header
 {
     transition: background-color ease 300ms;
     position: sticky;
-    top: -30px;
+    top: 0px;
     z-index: 999;
 
     .header__letter{
