@@ -14,7 +14,7 @@ export const Header: React.FC = () => {
   const width = useTransform(scrollY, [0, 100], [30, 0])
   const opacity = useTransform(scrollY, [0, 100], [1, 0])
   const scale = useTransform(scrollY, [30, 100], [1, 2])
-  const translateX = useTransform(scale, value => value * 24)
+  const translateX = useTransform(scale, value => (value - 1)  * 48)
 
   return (
     <React.Fragment>
@@ -90,8 +90,8 @@ export const Header: React.FC = () => {
             <li className="header__navitem">
               <a href="/">Projects</a>
             </li>
-            <li className="header__navitem text-white bg-green-400 px-3 py-1 hover:bg-green-50 hover:text-green-500 rounded-full font-bold tracking-wide uppercase">
-              <a href="/">Contact</a>
+            <li className="header__navitem text-white bg-green-400 px-3 py-1 hover:bg-green-200 hover:text-green-500 rounded-full font-bold tracking-wide uppercase">
+              <motion.a href="/" whileTap={{scale: 0.9, rotate: -3}} whileHover={{scale: 1.1}}>Contact</motion.a>
             </li>
           </ul>
         </div>

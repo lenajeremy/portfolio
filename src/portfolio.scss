@@ -14,6 +14,16 @@ body{
     min-height: 100vh;
 }
 
+@media (prefers-color-scheme:dark) {
+    body{
+        background-color: rgba(31, 31, 31, 0.863);
+    }
+
+    .blurred-blob{
+        display: none;
+    }
+}
+
 header
 {
     transition: background-color ease 300ms;
@@ -82,6 +92,7 @@ header
 }
 .custom_underline.primary{
     position: relative;
+    cursor: pointer;
     font-weight: bold;
 
     &::before{
@@ -89,7 +100,7 @@ header
         position: absolute;
         background: green;
         bottom: 2px;
-        width: 40px;
+        width: 50%;
         height: 5px;
         opacity: 0.5;
         left: 50%;
@@ -101,56 +112,74 @@ button{
     transition: background-color 0.3s ease;
 }
 
-.blob{
-   opacity: 1; 
-   animation: blobmove 5s infinite forwards ease-in-out;
-   pointer-events: none;
-}
-
-.smaller-blob{
-    transform: scale(0.5);
-    top: 0;
-}
-@keyframes blobmove{
-    0%{
-        transform: scale(0.7);
-    }
-    50%{
-        transform: scale(0.8) rotate(15deg);
-    }
-    80%{
-        transform: scale(0.85) rotate(-10deg);
-    }
-    100%{
-        transform: scale(0.7);
-    }
-}
-
 .hero{
     z-index: 1;
+
+    @media (prefers-color-scheme: dark){
+        h4{
+            color: #ddd;
+        }
+    }
+
+    .blurred-blob{
+        width: 500px;
+        height: 500px;
+        opacity: 0.2;
+        // background-blend-mode: luminosity;
+        // mix-blend-mode: lighten;
+
+        &:nth-of-type(1){
+            top: 0;
+            left: 10px;
+        }
+
+        &:nth-of-type(2){
+            background-color: turquoise;
+            top: 100px;
+            left: -100px;
+
+        }
+        &:nth-of-type(3){
+            background-color: blueviolet;
+            // opacity: 0.2;
+            top: -100px;
+            left: 200px;
+        }
+        
+    }
+
+    .myImageContainer{
+        width: 350px;
+        height: 450px;
+        overflow: hidden;
+        
+        img{
+            object-fit: cover;
+        }
+    }
+
 }
 .project{
     overflow: hidden;
     .project__content{
-        backdrop-filter: blur(3px);
         background: rgba(54, 54, 54, 0.6);
         transform: scale(1) translate(0%, 0%);
         height: 100%;
         width: 100%;
-        transition: clip-path 0.5s ease-out;
-        clip-path: circle(0% at 0 200%);
+        transition: opacity 0.3s ease-in-out;
+        opacity: 0;
     }
     .project__image{
-        transition: transform 0.5s ease-in;
+        transition: transform 0.3s ease-in-out;
     }
 }
 .project:hover,
 .project--hover{
     .project__content{
-        clip-path: circle(150% at 0 100%);
+        opacity: 1;
     }
     .project__image{
-        transform: scale(1.15);
+        transform: scale(1.05);
     }
 }
 
