@@ -5,7 +5,6 @@ import {
   motion,
   useTransform,
   useViewportScroll,
-  Variants,
 } from 'framer-motion'
 
 export const Header: React.FC = () => {
