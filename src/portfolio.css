@@ -31,6 +31,13 @@ header {
   z-index: 999;
 }
 
+header .header__letter {
+  display: -ms-inline-grid;
+  display: inline-grid;
+  place-content: center;
+  width: 30px;
+}
+
 .hero .bg-green-300 {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);

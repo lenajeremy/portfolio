@@ -21,6 +21,12 @@ header
     top: -30px;
     z-index: 999;
 
+    .header__letter{
+        display: inline-grid;
+        place-content: center;
+        width: 30px;
+        
+    }
 
 }
 .hero{

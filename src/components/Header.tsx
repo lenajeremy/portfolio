@@ -1,26 +1,83 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import {motion, useViewportScroll} from 'framer-motion'
+import {
+  motion,
+  useTransform,
+  useViewportScroll,
+  Variants,
+} from 'framer-motion'
 
 export const Header: React.FC = () => {
-    const { scrollY } = useViewportScroll()
+  const { scrollY } = useViewportScroll()
+
+  const width = useTransform(scrollY, [0, 100], [30, 0])
+  const opacity = useTransform(scrollY, [0, 100], [1, 0])
+  const scale = useTransform(scrollY, [30, 100], [1, 2])
+  const translateX = useTransform(scale, value => value * 24)
 
   return (
     <React.Fragment>
       <header className="header flex md:py-16 justify-between md:px-32 p-10">
         <Link to="/">
-          <div className="header__logo text-green-400 text-2xl font-bold pointer">
-            <span className="header__letter logo-j1">J</span>
-            <span className="header__letter logo-e1">E</span>
-            <span className="header__letter logo-r1">R</span>
-            <span className="header__letter logo-e2">E</span>
-            <span className="header__letter logo-m1">M</span>
-            <span className="header__letter logo-i1">I</span>
-            <span className="header__letter logo-a1">A</span>
-            <span className="header__letter logo-h1">H</span>
-            <span className="header__letter logo-p">.</span>
-          </div>
+          <motion.div
+            style={{ scale, x: translateX }}
+            className="header__logo text-green-400 text-2xl font-bold pointer"
+          >
+            <motion.span className="logo-j1" whileHover={{ y: -5 }}>
+              J
+            </motion.span>
+            <motion.span
+              whileHover={{ y: -5 }}
+              style={{ width, opacity }}
+              className="header__letter logo-e1"
+            >
+              E
+            </motion.span>
+            <motion.span
+              whileHover={{ y: -5 }}
+              style={{ width, opacity }}
+              className="header__letter logo-r1"
+            >
+              R
+            </motion.span>
+            <motion.span
+              whileHover={{ y: -5 }}
+              style={{ width, opacity }}
+              className="header__letter logo-e2"
+            >
+              E
+            </motion.span>
+            <motion.span
+              whileHover={{ y: -5 }}
+              style={{ width, opacity }}
+              className="header__letter logo-m1"
+            >
+              M
+            </motion.span>
+            <motion.span
+              whileHover={{ y: -5 }}
+              style={{ width, opacity }}
+              className="header__letter logo-i1"
+            >
+              I
+            </motion.span>
+            <motion.span
+              whileHover={{ y: -5 }}
+              style={{ width, opacity }}
+              className="header__letter logo-a1"
+            >
+              A
+            </motion.span>
+            <motion.span
+              whileHover={{ y: -5 }}
+              style={{ width, opacity }}
+              className="header__letter logo-h1"
+            >
+              H
+            </motion.span>
+            <motion.span className="logo-p">.</motion.span>
+          </motion.div>
         </Link>
         <div className="header__nav hidden md:block">
           <ul className="flex space-x-10 text-lg align-center">
