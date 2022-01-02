@@ -60,13 +60,13 @@ const Projects = () => {
   }, [])
 
   return (
-    <div className="bg-green-800 md:my-20 md:p-10">
-      <h1 className="text-center text-4xl text-white font-bold custom_underline primary">
+    <div className="md:p-10 projectsContainer">
+      <h1 className="text-right text-9xl -m:3xl uppercase text-white font-bold primary">
         Projects
       </h1>
       <section
         id="section2"
-        className="p-2 h-screen place-content-center grid gap-6 grid-cols-3 grid-rows-2 my-16"
+        className="p-2 h-screen place-content-center grid gap-6 gap-y-10 grid-cols-3 grid-rows-2 my-16"
       >
         {loading ? (
           <Loader dotColor="bg-white" />
@@ -87,10 +87,11 @@ const Project: React.FC<{ project: ProjectInterface }> = ({ project }) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
     >
-      <img
+      <motion.img
         src={project.primaryImageURL}
         className="project__image w-full h-full object-cover"
         alt={project.title}
+        layoutId={project.primaryImageURL}
       />
       <div className="project__content p-4 flex flex-col justify-between text-center absolute h-full inset-0 space-y-4 project__content--hover w-full">
         <div className="flex gap-2">
@@ -125,7 +126,7 @@ const Project: React.FC<{ project: ProjectInterface }> = ({ project }) => {
             </button>
           </Link>
 
-          <Link to={`/project/${project.slug}`}>
+          <Link to={`/project/${project.slug}`} state={project}>
             <button className="border-gray-100 rounded-full bg-transparent border tracking-wide p-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -133,23 +134,41 @@ const Project: React.FC<{ project: ProjectInterface }> = ({ project }) => {
                 height="20"
                 viewBox="0 0 24 24"
               >
-                <path fill='white' d="M12 2c2.757 0 5 2.243 5 5.001 0 2.756-2.243 5-5 5s-5-2.244-5-5c0-2.758 2.243-5.001 5-5.001zm0-2c-3.866 0-7 3.134-7 7.001 0 3.865 3.134 7 7 7s7-3.135 7-7c0-3.867-3.134-7.001-7-7.001zm6.369 13.353c-.497.498-1.057.931-1.658 1.302 2.872 1.874 4.378 5.083 4.972 7.346h-19.387c.572-2.29 2.058-5.503 4.973-7.358-.603-.374-1.162-.811-1.658-1.312-4.258 3.072-5.611 8.506-5.611 10.669h24c0-2.142-1.44-7.557-5.631-10.647z" />
+                <path
+                  fill="white"
+                  d="M12 2c2.757 0 5 2.243 5 5.001 0 2.756-2.243 5-5 5s-5-2.244-5-5c0-2.758 2.243-5.001 5-5.001zm0-2c-3.866 0-7 3.134-7 7.001 0 3.865 3.134 7 7 7s7-3.135 7-7c0-3.867-3.134-7.001-7-7.001zm6.369 13.353c-.497.498-1.057.931-1.658 1.302 2.872 1.874 4.378 5.083 4.972 7.346h-19.387c.572-2.29 2.058-5.503 4.973-7.358-.603-.374-1.162-.811-1.658-1.312-4.258 3.072-5.611 8.506-5.611 10.669h24c0-2.142-1.44-7.557-5.631-10.647z"
+                />
               </svg>
             </button>
           </Link>
         </div>
         <div className="flex space-x-4 justify-center">
           <Link
+            state={project}
             to={`/project/${project.slug}`}
-            className="border-gray-100 rounded-full bg-white border text-black tracking-wide px-5 py-2 font-light"
+            className="border-white rounded-full bg-white border text-black tracking-wide px-6 py-3 font-light"
           >
             {' '}
             View Project
           </Link>
         </div>
-        <h1 className="project__title text-white font-bold text-4xl leading-8 ">
-          {project.title}
-        </h1>
+        <div className="flex justify-end">
+          <Link to={`/project/${project.slug}/share`}>
+            <button className="border-gray-100 rounded-full bg-transparent border tracking-wide p-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="white"
+                  d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm1 15.889v-2.223s-3.78-.114-7 3.333c1.513-6.587 7-7.778 7-7.778v-2.221l5 4.425-5 4.464z"
+                />
+              </svg>
+            </button>
+          </Link>
+        </div>
       </div>
     </motion.div>
   )

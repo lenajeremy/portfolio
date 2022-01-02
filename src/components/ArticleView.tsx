@@ -5,38 +5,42 @@ import React, {
     useState
 } from 'react'
 
+import { motion } from 'framer-motion'
+
 import {
     ProjectInterface,
     getSingleProjectFromRequest
 } from './Projects'
 
-import { useParams } from 'react-router'
+import { useParams, useLocation } from 'react-router'
 import { Loader } from './Loader'
 
 const ArticleView: React.FC = () => {
 
     const { projectSlug } = useParams()
+    const {state} = useLocation()
 
-    useEffect(() => {
-        (async function () {
-            const { data } = await axios.get('/project/' + projectSlug)
-            setProject(getSingleProjectFromRequest(data))
-            setTimeout(() => {
-                setLoading(false)
-            }, 2000)
-        })()
-    }, [projectSlug])
+    // useEffect(() => {
+    //     (async function () {
+    //         const { data } = await axios.get('/project/' + projectSlug)
+    //         setProject(getSingleProjectFromRequest(data))
+    //         setTimeout(() => {
+    //             setLoading(false)
+    //         }, 2000)
+    //     })()
+    // }, [projectSlug])
 
-    const [loading, setLoading] = useState(true)
-    const [project, setProject] = useState<ProjectInterface>()
+    const [loading, setLoading] = useState(false)
+    const [project, setProject] = useState<ProjectInterface>(state as ProjectInterface)
 
+    // alert(JSON.stringify(state))
     return (
         <div className='article'>
             {
                 loading ?
                     <Loader /> :
                     <div>
-                        <img className='primaryImage' src={project?.primaryImageURL} alt={project?.title} />
+                        <motion.img layoutId = {project.primaryImageURL} className='primaryImage' src={project?.primaryImageURL} alt={project?.title} />
                         <div className='mt-10'>
                             <h1 className='text-4xl font-bold leading-loose'>{project?.title}</h1>
                             <h6 className='w-3/4 leading-8 text-xl text-gray-700'>{project?.description}</h6>
