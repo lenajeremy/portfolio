@@ -218,17 +218,16 @@ button {
      object-fit: cover;
 }
 
-.projectsContainer h1 {
+.projectsContainer h1, .technologies h1 {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#1f1f1f), to(#c9c9c9));
   background-image: linear-gradient(to bottom, #1f1f1f, #c9c9c9);
-  margin-bottom: -110px;
   opacity: 0.7;
   -webkit-background-clip: text;
   color: transparent;
 }
 
 @media (prefers-color-scheme: light) {
-  .projectsContainer h1 {
+  .projectsContainer h1, .technologies h1 {
     background-image: -webkit-gradient(linear, left top, left bottom, from(#b1b1b1), to(#ffffff));
     background-image: linear-gradient(to bottom, #b1b1b1, #ffffff);
   }
@@ -451,5 +450,21 @@ button {
 .projectContent p {
   line-height: 2em;
   font-size: 18px;
+}
+
+.technologies img {
+  margin-top: 1em;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, from(transparent), color-stop(90%, pink));
+  -webkit-mask-image: linear-gradient(to top, transparent, pink 90%);
+          mask-image: -webkit-gradient(linear, left bottom, left top, from(transparent), color-stop(90%, pink));
+          mask-image: linear-gradient(to top, transparent, pink 90%);
+  width: 300px;
+  height: 300px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
 }
 /*# sourceMappingURL=portfolio.css.map */

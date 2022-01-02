@@ -10,6 +10,7 @@ import { NewArticleForm } from './components/NewArticleForm'
 import { MyStack } from './components/MyStack'
 import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom'
 import { AnimatePresence, AnimateSharedLayout } from 'framer-motion'
+import { Contact } from './components/Contact'
 // import { CKEditor } from '@ckeditor/ckeditor5-react'
 // import ClassicEditor from '@ckeditor/ckeditor5-build-classic'
 
@@ -19,6 +20,7 @@ const HomePage = () => (
     <Hero />
     <Projects />
     <MyStack />
+    <Contact />
     <Footer />
   </React.Fragment>
 )
