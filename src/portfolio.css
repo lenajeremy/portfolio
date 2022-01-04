@@ -284,8 +284,8 @@ button {
 
 .project:hover .project__image,
 .project--hover .project__image {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  -webkit-transform: scale(1.05) rotate(-2deg);
+          transform: scale(1.05) rotate(-2deg);
 }
 
 .loaderContainer {

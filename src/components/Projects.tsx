@@ -56,7 +56,6 @@ const Projects = () => {
     ;(async function () {
       const querySnapShot = await getDocs(collection(db, 'Projects'))
       const projectsArray = querySnapShot.docs.map(doc => doc.data())
-      // console.log(projectsArray)
       setProjects(getProjectArrayFromFirebase(projectsArray));
       setLoading(false)
     })()
@@ -151,7 +150,7 @@ const Project: React.FC<{ project: ProjectInterface }> = ({ project }) => {
           <Link
             state={project}
             to={`/project/${project.slug}`}
-            className="border-white rounded-full bg-white border text-black tracking-wide px-6 py-3 font-light"
+            className="border-white hover:bg-gray-500 hover:border-gray-500 hover:text-white rounded-full bg-white border text-black tracking-wide px-6 py-3 font-light"
           >
             {' '}
             View Project
