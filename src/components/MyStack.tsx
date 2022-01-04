@@ -9,24 +9,24 @@ export const MyStack = () => {
 
     
   return (
-    <div className="md:p-10 technologies h-screen overflow-hidden flex flex-col justify-center">
-      <h1 className="text-center text-8xl uppercase text-white font-bold primary">
+    <div className="mt-10 md:mt-0 md:p-10 technologies min-h-screen overflow-hidden flex flex-col justify-center">
+      <h1 className="text-center text-4xl md:text-8xl uppercase text-white font-bold primary">
         TECHNOLOGIES
       </h1>
-      <motion.div className='flex gap-24 px-24'>
-        <div className='ht techml'>
+      <motion.div className='mt-8 flex md:gap-24 md:px-24 flex-col md:flex-row align-center gap-8'>
+        <div className='html tech'>
             <img src={html} alt="" />
         </div>
-        <div className="cs techs">
+        <div className="css tech">
             <img src = {css} alt = '' />
         </div>
         <div className="js tech">
             <img src = {js} alt = '' />
         </div>
-        <div className="re techact">
+        <div className="react tech">
             <img src = {react} alt = '' />
         </div>
-        <div className='gi techt'>
+        <div className='git tech'>
             <img src={git} alt="" />
         </div>
       </motion.div>

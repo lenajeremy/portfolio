@@ -255,7 +255,8 @@ button {
 
 @media screen and (max-width: 768px) {
   .hero .myImageContainer {
-    width: 330px;
+    width: 300px;
+    height: 400px;
     margin-top: 40px;
     -webkit-box-shadow: none;
             box-shadow: none;
@@ -293,6 +294,12 @@ button {
 
 .project {
   overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .project {
+    height: 350px;
+  }
 }
 
 .project h1 {
@@ -515,6 +522,17 @@ button {
   font-size: 18px;
 }
 
+@media screen and (max-width: 768px) {
+  .technologies .tech {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .technologies img {
   margin-top: 1em;
   -webkit-filter: grayscale(1);
@@ -540,5 +558,12 @@ button {
           filter: none;
   -webkit-mask-image: none;
           mask-image: none;
+}
+
+@media screen and (max-width: 768px) {
+  .technologies img {
+    width: 150px;
+    height: 150px;
+  }
 }
 /*# sourceMappingURL=portfolio.css.map */

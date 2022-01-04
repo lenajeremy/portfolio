@@ -62,15 +62,15 @@ const Projects = () => {
   }, [])
 
   return (
-    <div className="md:p-10 projectsContainer">
+    <div className="md:p-10 px-4 md:px-0 projectsContainer">
       <motion.h1
-        className="text-center text-6xl md:text-8xl uppercase text-white font-bold primary"
+        className="text-center text-5xl md:text-8xl uppercase text-white font-bold primary"
       >
         Projects
       </motion.h1>
       <section
         id="section2"
-        className="h-screen place-content-center grid gap-6 md:grid-cols-3 grid-rows-2 my-16"
+        className="md:px-10 min-h-screen md:h-screen place-content-center grid gap-4 md:gap-6 md:grid-cols-3 md:grid-rows-2 grid-cols-1 grid-rows-6 md:my-16 my-8"
       >
         {loading ? (
           <Loader dotColor="bg-white" />
@@ -87,7 +87,7 @@ const Projects = () => {
 const Project: React.FC<{ project: ProjectInterface }> = ({ project }) => {
   return (
     <motion.div
-      className="project relative bg-green-50 rounded-md overflow-hidden"
+      className="project relative bg-green-50 md:rounded-md overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
     >
@@ -150,7 +150,7 @@ const Project: React.FC<{ project: ProjectInterface }> = ({ project }) => {
           <Link
             state={project}
             to={`/project/${project.slug}`}
-            className="border-white hover:bg-gray-500 hover:border-gray-500 hover:text-white rounded-full bg-white border text-black tracking-wide px-6 py-3 font-light"
+            className="text-2xl border-white hover:bg-gray-500 hover:border-gray-500 hover:text-white rounded-full bg-white border text-black tracking-wide px-6 py-3 font-light"
           >
             {' '}
             View Project
