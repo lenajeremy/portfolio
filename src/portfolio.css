@@ -489,6 +489,12 @@ button {
   margin-top: 30px;
 }
 
+@media screen and (max-width: 768px) {
+  .article {
+    width: 100%;
+  }
+}
+
 .article > * {
   width: 87%;
   margin: auto;
