@@ -24,10 +24,7 @@ body {
 
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: black;
-  }
-  .blurred-blob {
-    display: none;
+    background-color: rgba(31, 31, 31, 0.863);
   }
 }
 
@@ -36,8 +33,14 @@ header {
   transition: background-color ease 300ms;
   position: -webkit-sticky;
   position: sticky;
-  top: 0px;
+  top: 20px;
   z-index: 999;
+}
+
+@media (prefers-color-scheme: light) {
+  header .header__logo {
+    color: white;
+  }
 }
 
 header .header__letter {
@@ -45,13 +48,6 @@ header .header__letter {
   display: inline-grid;
   place-content: center;
   width: 30px;
-}
-
-.hero .bg-green-300 {
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  left: 50%;
-  top: 50%;
 }
 
 @-webkit-keyframes fadeInUp {
@@ -178,6 +174,17 @@ button {
   height: 80vh;
 }
 
+.hero h1, .hero h4 {
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.hero h4 {
+  color: black;
+  margin-bottom: 20px !important;
+}
+
 @media (prefers-color-scheme: dark) {
   .hero h4 {
     color: #ddd;
@@ -187,18 +194,26 @@ button {
 .hero .blurred-blob {
   width: 500px;
   height: 500px;
-  opacity: 0.2;
+  opacity: 0.7;
+}
+
+@media (prefers-color-scheme: dark) {
+  .hero .blurred-blob {
+    opacity: 0.2;
+  }
 }
 
 .hero .blurred-blob:nth-of-type(1) {
-  top: 0;
-  left: 10px;
+  top: -100px;
+  left: -100px;
+  z-index: 1;
+  background-color: #c712a9;
 }
 
 .hero .blurred-blob:nth-of-type(2) {
-  background-color: turquoise;
   top: 100px;
   left: -100px;
+  background-color: turquoise;
 }
 
 .hero .blurred-blob:nth-of-type(3) {
@@ -218,16 +233,23 @@ button {
      object-fit: cover;
 }
 
-.projectsContainer h1, .technologies h1 {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#1f1f1f), to(#c9c9c9));
-  background-image: linear-gradient(to bottom, #1f1f1f, #c9c9c9);
-  opacity: 0.7;
+.projectsContainer,
+.technologies {
+  overflow-x: hidden;
+}
+
+.projectsContainer h1,
+.technologies h1 {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1f1f1f), to(#ababab));
+  background-image: linear-gradient(to bottom, #1f1f1f, #ababab);
+  opacity: 0.5;
   -webkit-background-clip: text;
   color: transparent;
 }
 
 @media (prefers-color-scheme: light) {
-  .projectsContainer h1, .technologies h1 {
+  .projectsContainer h1,
+  .technologies h1 {
     background-image: -webkit-gradient(linear, left top, left bottom, from(#b1b1b1), to(#ffffff));
     background-image: linear-gradient(to bottom, #b1b1b1, #ffffff);
   }
@@ -416,7 +438,7 @@ button {
 .article {
   width: 65%;
   margin: auto;
-  margin-top: -30px;
+  margin-top: 30px;
 }
 
 .article > * {
@@ -440,7 +462,7 @@ button {
 }
 
 .projectContent h2 {
-  font-size: 2.0em;
+  font-size: 2em;
 }
 
 .projectContent h3 {

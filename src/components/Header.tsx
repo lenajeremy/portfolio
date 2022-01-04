@@ -10,20 +10,20 @@ import {
 export const Header: React.FC = () => {
   const { scrollY } = useViewportScroll()
 
-  const width = useTransform(scrollY, [0, 100], [30, 0])
-  const opacity = useTransform(scrollY, [0, 100], [1, 0])
-  const scale = useTransform(scrollY, [30, 100], [1, 2])
+  const width = useTransform(scrollY, [0, 150], [30, 0])
+  const opacity = useTransform(scrollY, [0, 150], [1, 0])
+  const scale = useTransform(scrollY, [50, 150], [1, 2])
   const translateX = useTransform(scale, value => (value - 1)  * 48)
 
   return (
     <React.Fragment>
-      <header className="header flex md:py-8 justify-between md:px-32 p-10">
+      <header className="header flex md:py-10 justify-between md:px-32 p-10 bg-dark">
         <Link to="/">
           <motion.div
             style={{ scale, x: translateX }}
             className="header__logo text-green-400 text-2xl font-bold pointer"
           >
-            <motion.span className="logo-j1" whileHover={{ y: -5 }}>
+            <motion.span className="logo-j1" whileHover={{ y: -6 }}>
               J
             </motion.span>
             <motion.span
@@ -84,7 +84,7 @@ export const Header: React.FC = () => {
               <a href="/">Home</a>
             </li>
             <li className="header__navitem">
-              <a href="/">About</a>
+              <a href="/">Projects</a>
             </li>
             <li className="header__navitem">
               <a href="/">Projects</a>

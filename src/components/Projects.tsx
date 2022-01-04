@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Loader } from './Loader'
 import { motion } from 'framer-motion'
+import app from '../firebase'
+import { getFirestore, getDocs, collection, DocumentData } from 'firebase/firestore'
 
 export interface ProjectInterface {
   title: string
@@ -16,7 +18,7 @@ export interface ProjectInterface {
 }
 
 export function getSingleProjectFromRequest(
-  projectRequest: any,
+  projectRequest: DocumentData,
 ): ProjectInterface {
   return {
     title: projectRequest.title,
@@ -30,43 +32,46 @@ export function getSingleProjectFromRequest(
   }
 }
 
-export function getProjectArrayFromRequest(
+export function getProjectArrayFromFirebase(
   projectsRequest: any,
 ): ProjectInterface[] {
   return projectsRequest.map((project: any) => ({
     title: project.title,
     description: project.description,
     content: project.content,
-    primaryImageURL: project.main_image.imageURL,
-    otherImages: project.other_images,
-    liveURL: project.live_url,
-    githubURL: project.github_url,
+    primaryImageURL: project.images.find((image:any) => image.isPrimaryImage).imageURL,
+    otherImages: project.images.filter((image: any) => !image.isPrimaryImage),
+    liveURL: project.liveURL,
+    githubURL: project.githubURL,
     slug: project.slug,
   }))
 }
 
 const Projects = () => {
+  const db = getFirestore(app)
   const [projects, setProjects] = useState<ProjectInterface[]>([])
   const [loading, setLoading] = useState<boolean>(true)
 
   useEffect(() => {
     ;(async function () {
-      const { data } = await axios.get('/get_projects')
-      setProjects(getProjectArrayFromRequest(data.projects))
-      setTimeout(() => {
-        setLoading(false)
-      }, 2000)
+      const querySnapShot = await getDocs(collection(db, 'Projects'))
+      const projectsArray = querySnapShot.docs.map(doc => doc.data())
+      // console.log(projectsArray)
+      setProjects(getProjectArrayFromFirebase(projectsArray));
+      setLoading(false)
     })()
   }, [])
 
   return (
     <div className="md:p-10 projectsContainer">
-      <h1 className="text-right text-9xl -m:3xl uppercase text-white font-bold primary">
+      <motion.h1
+        className="text-center text-8xl uppercase text-white font-bold primary"
+      >
         Projects
-      </h1>
+      </motion.h1>
       <section
         id="section2"
-        className="p-2 h-screen place-content-center grid gap-6 gap-y-10 grid-cols-3 grid-rows-2 my-16"
+        className="h-screen place-content-center grid gap-6 gap-y-10 md:grid-cols-3 grid-rows-2 my-16"
       >
         {loading ? (
           <Loader dotColor="bg-white" />

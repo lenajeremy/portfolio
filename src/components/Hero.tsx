@@ -8,11 +8,11 @@ const Hero: React.FC = () => {
 
   return (
     <div className="hero grid md:grid-cols-2 gap-4 h-3/4 text-center md:text-left content-center">
-      <div className="absolute blurred-blob bg-green-300 rounded-full filter blur-3xl"></div>
+      <div className="absolute blurred-blob rounded-full filter blur-3xl"></div>
       <div className="absolute blurred-blob rounded-full filter blur-3xl"></div>
       <div className="absolute blurred-blob rounded-full filter blur-3xl"></div>
 
-      <div className="rounded items-center md:pl-32 w-full h-full space-y-4 md:pt-20 relative order-1 md:order-0">
+      <div className="rounded items-center md:pl-32 w-full h-full space-y-4 md:pt-16 relative order-1 md:order-0">
         <h1 className="text-3xl md:text-5xl font-semibold md:font-bold">
           I'm Jeremiah Lena
         </h1>
@@ -41,7 +41,7 @@ const Hero: React.FC = () => {
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9, rotate: -3 }}
-            className="border-green-500 hover:bg-green-500 hover:text-white border rounded-full bg-white text-green-500 tracking-wide px-5 py-2 font-bold"
+            className="hover:bg-green-500 bg-white bg-opacity-30 text-green-500 hover:text-white hover:border-green-500 border border-white rounded-full bg-transparent tracking-wide px-5 py-2 font-bold"
           >
             See more...
           </motion.button>

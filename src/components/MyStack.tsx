@@ -10,10 +10,10 @@ export const MyStack = () => {
     
   return (
     <div className="md:p-10 technologies h-screen overflow-hidden flex flex-col justify-center">
-      <h1 className="text-right text-8xl uppercase text-white font-bold primary">
+      <h1 className="text-center text-8xl uppercase text-white font-bold primary">
         TECHNOLOGIES
       </h1>
-      <motion.div className='flex gap-10'>
+      <motion.div className='flex gap-24'>
         <div className='html'>
             <img src={html} alt="" />
         </div>
