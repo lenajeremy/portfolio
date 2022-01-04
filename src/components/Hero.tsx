@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
           user interfaces. I strongly believe that overrall user experience
           should be a priority when building applications.{' '}
         </h4>
-        <div className="flex space-x-4 mt-5 justify-center md:justify-none">
+        <div className="flex space-x-4 mt-5 justify-center md:justify-start md:justify-none">
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9, rotate: -3 }}
