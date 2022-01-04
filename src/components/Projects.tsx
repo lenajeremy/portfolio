@@ -64,7 +64,7 @@ const Projects = () => {
   return (
     <div className="md:p-10 projectsContainer">
       <motion.h1
-        className="text-center text-7xl md:text-8xl uppercase text-white font-bold primary"
+        className="text-center text-6xl md:text-8xl uppercase text-white font-bold primary"
       >
         Projects
       </motion.h1>

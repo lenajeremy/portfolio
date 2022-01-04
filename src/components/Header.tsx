@@ -23,9 +23,9 @@ export const Header: React.FC = () => {
     scrollY.onChange((scrollPosition) => {
 
       if (scrollPosition >= 150) {
-        animate(assumedScrollPositon, 150, {duration: 0.7})
+        animate(assumedScrollPositon, 150, {duration: 0.5})
       } else {
-        animate(assumedScrollPositon, 0, {duration: 0.7})
+        animate(assumedScrollPositon, 0, {duration: 0.5})
       }
 
     })
@@ -34,7 +34,7 @@ export const Header: React.FC = () => {
   }, [])
   return (
     <React.Fragment>
-      <header className="header flex md:py-10 justify-between uppercase md:px-32 px-6 py-10">
+      <header className="header flex md:py-10 justify-between uppercase md:px-32 px-8 py-10">
         <Link to="/">
           <motion.div
             style={{ scale, x: translateX }}

@@ -7,16 +7,16 @@ const Hero: React.FC = () => {
   useEffect(() => {}, [])
 
   return (
-    <div className="hero mt-10 md:mt-0 px-4 mb-20 md:md-0 grid md:grid-cols-2 gap-4 h-3/4 text-center md:text-left content-center">
+    <div className="hero mt-10 md:mt-0 px-6 mb-20 md:md-0 grid md:grid-cols-2 gap-4 h-3/4 text-center md:text-left content-center">
       <div className="absolute blurred-blob rounded-full filter blur-3xl"></div>
       <div className="absolute blurred-blob rounded-full filter blur-3xl"></div>
       <div className="absolute blurred-blob rounded-full filter blur-3xl"></div>
 
-      <div className="rounded items-center md:pl-32 w-full h-full space-y-4 md:pt-16 relative order-1 md:order-0">
-        <h1 className="text-4xl md:text-5xl font-semibold md:font-bold">
+      <div className="rounded items-center md:pl-32 w-full h-full space-y-6 md:pt-16 relative order-1 md:order-0">
+        <h1 className="text-3xl md:text-5xl font-semibold md:font-bold">
           I'm Jeremiah Lena
         </h1>
-        <h4 className="text-xl text-gray-700 leading-8 md:leading-10 mb-4">
+        <h4 className="text-lg text-gray-700 leading-8 md:leading-10 mb-4">
           I'm a frontend developer. I enjoy building{' '}
           <span className="text-green-600 custom_underline primary">web</span>{' '}
           and mobile application with{' '}

@@ -201,11 +201,12 @@ button {
     @media screen and (max-width: 768px){
       width: 330px;
       margin-top: 40px;
-      -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent);
+      box-shadow: none;
     }
 
     img {
       object-fit: cover;
+      -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent);
     }
   }
 }

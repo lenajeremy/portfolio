@@ -257,14 +257,16 @@ button {
   .hero .myImageContainer {
     width: 330px;
     margin-top: 40px;
-    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(60%, black), to(transparent));
-    -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent);
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
 }
 
 .hero .myImageContainer img {
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(70%, black), to(transparent));
+  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent);
 }
 
 .projectsContainer,
