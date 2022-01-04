@@ -15,7 +15,7 @@ const NewArticleForm: React.FC = () => {
     primaryImage: File
     otherImages: File[]
     githubURL: string
-    liveURL: string
+    // liveURL: string
   }
 
   // const [formValues, setFormValues] = useState<ArticleFormValues>()
