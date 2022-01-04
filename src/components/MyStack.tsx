@@ -13,7 +13,7 @@ export const MyStack = () => {
       <h1 className="text-center text-8xl uppercase text-white font-bold primary">
         TECHNOLOGIES
       </h1>
-      <motion.div className='flex gap-24'>
+      <motion.div className='flex gap-24 px-24'>
         <div className='html'>
             <img src={html} alt="" />
         </div>

@@ -3,10 +3,18 @@
 @include utilities */
 
 
-html{
+html:not(.dark):not(.light){
     color-scheme: light dark;
     scroll-behavior: smooth;
     
+}
+
+html.dark{
+    color-scheme: dark;
+}
+
+html.light{
+    color-scheme: light;
 }
 
 ::-webkit-scrollbar{

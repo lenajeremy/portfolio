@@ -192,8 +192,13 @@ button {
 .project {
   overflow: hidden;
 
+  h1{
+    color: white;
+    opacity: 1;
+  }
+
   .project__content {
-    background: rgba(54, 54, 54, 0.7);
+    background: rgba(54, 54, 54, 0.8);
     transform: scale(1) translate(0%, 0%);
     height: 100%;
     width: 100%;
