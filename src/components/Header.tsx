@@ -13,10 +13,10 @@ export const Header: React.FC = () => {
   const { scrollY } = useViewportScroll()
 
   const assumedScrollPositon = useMotionValue(0)
-  const width = useTransform(assumedScrollPositon, [0, 150], [30, 0])
+  const width = useTransform(assumedScrollPositon, [0, 150], [window.innerWidth <= 768 ? 20 : 30, 0])
   const opacity = useTransform(assumedScrollPositon, [0, 150], [1, 0])
   const scale = useTransform(assumedScrollPositon, [50, 150], [1, 2])
-  const translateX = useTransform(scale, (value) => (value - 1) * 48)
+  const translateX = useTransform(scale, (value) => window.innerWidth <= 768 ? 0 : (value - 1) * 48)
 
   useEffect(() => {
 

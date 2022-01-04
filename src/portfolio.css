@@ -492,6 +492,7 @@ button {
 @media screen and (max-width: 768px) {
   .article {
     width: 100%;
+    margin-top: 0;
   }
 }
 
@@ -525,7 +526,9 @@ button {
 
 .projectContent p {
   line-height: 2em;
-  font-size: 18px;
+  font-size: 16px;
+  margin-bottom: 0.8em;
+  margin-top: 0.8em;
 }
 
 @media screen and (max-width: 768px) {
