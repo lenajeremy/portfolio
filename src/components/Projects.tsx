@@ -157,7 +157,7 @@ const Project: React.FC<{ project: ProjectInterface }> = ({ project }) => {
           </Link>
         </div>
         <div className="flex justify-center">
-          <h1 className = 'text-white text-6xl uppercase'>{project.title}</h1>
+          <h1 className = 'text-white text-5xl uppercase'>{project.title}</h1>
         </div>
       </div>
     </motion.div>
