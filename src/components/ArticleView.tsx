@@ -42,7 +42,7 @@ const ArticleView: React.FC = () => {
                     <div>
                         <motion.img layoutId = {project.primaryImageURL} className='primaryImage' src={project?.primaryImageURL} alt={project?.title} />
                         <div className='mt-10'>
-                            <h1 className='text-4xl font-bold leading-loose'>{project?.title}</h1>
+                            <h1 className='text-4xl font-bold mb-2 md:leading-loose'>{project?.title}</h1>
                             <h6 className='w-3/4 leading-8 text-xl text-gray-700'>{project?.description}</h6>
                             <div dangerouslySetInnerHTML={{ __html: project?.content as string }} className = 'projectContent'>
 

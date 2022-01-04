@@ -512,6 +512,18 @@ button {
      object-position: center;
 }
 
+@media screen and (max-width: 768px) {
+  .article .primaryImage {
+    height: 250px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .article h6 {
+    color: lightgray;
+  }
+}
+
 .projectContent h1 {
   font-size: 2.5em;
 }
