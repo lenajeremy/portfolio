@@ -64,13 +64,13 @@ const Projects = () => {
   return (
     <div className="md:p-10 projectsContainer">
       <motion.h1
-        className="text-center text-8xl uppercase text-white font-bold primary"
+        className="text-center text-7xl md:text-8xl uppercase text-white font-bold primary"
       >
         Projects
       </motion.h1>
       <section
         id="section2"
-        className="h-screen place-content-center grid gap-6 gap-y-10 md:grid-cols-3 grid-rows-2 my-16"
+        className="h-screen place-content-center grid gap-6 md:grid-cols-3 grid-rows-2 my-16"
       >
         {loading ? (
           <Loader dotColor="bg-white" />
@@ -87,7 +87,7 @@ const Projects = () => {
 const Project: React.FC<{ project: ProjectInterface }> = ({ project }) => {
   return (
     <motion.div
-      className="project relative bg-green-50"
+      className="project relative bg-green-50 rounded-md overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
     >

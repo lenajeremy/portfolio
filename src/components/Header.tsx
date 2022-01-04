@@ -34,7 +34,7 @@ export const Header: React.FC = () => {
   }, [])
   return (
     <React.Fragment>
-      <header className="header flex md:py-10 justify-between md:px-32 p-10 bg-dark">
+      <header className="header flex md:py-10 justify-between uppercase md:px-32 px-6 py-10">
         <Link to="/">
           <motion.div
             style={{ scale, x: translateX }}
@@ -104,7 +104,7 @@ export const Header: React.FC = () => {
               <a href="/">Projects</a>
             </li>
             <li className="header__navitem">
-              <a href="/">Projects</a>
+              <a href="/">Tech</a>
             </li>
             <li>
               <motion.svg

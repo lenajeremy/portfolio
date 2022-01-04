@@ -26,16 +26,29 @@ header {
   top: 20px;
   z-index: 999;
 
+  @media screen and (max-width: 768px){
+    &{
+      top: 0;
+    }
+  }
+
   @media (prefers-color-scheme: light) {
     .header__logo {
       color: white;
     }
   }
 
+  
   .header__letter {
     display: inline-grid;
     place-content: center;
     width: 30px;
+  }
+
+  @media screen and (max-width: 768px){
+    .header__logo{
+      color: #10b981;
+    }
   }
 }
 .hero {
@@ -107,7 +120,7 @@ button {
 
 .hero {
   z-index: 1;
-  height: 80vh;
+  min-height: 80vh;
 
   h1,h4{
       color: white;
@@ -115,14 +128,24 @@ button {
       z-index: 1;
   }
 
+
+
   h4{
     color: black;
       margin-bottom: 20px!important;
   }
 
   @media (prefers-color-scheme: dark) {
-    h4 {
-      color: #ddd;
+    h4{
+      color: #eee;
+    }
+  }
+
+  @media screen and (max-width:768px){
+    @media (prefers-color-scheme:light) {
+      h1{
+        color: black;
+      }
     }
   }
 
@@ -134,6 +157,13 @@ button {
     @media (prefers-color-scheme: dark) {
       & {
         opacity: 0.2;
+      }
+    }
+
+    @media screen and (max-width: 768px){
+      &{
+        opacity: 0;
+        z-index: -1;
       }
     }
 
@@ -167,6 +197,12 @@ button {
     width: 350px;
     height: 450px;
     overflow: hidden;
+
+    @media screen and (max-width: 768px){
+      width: 330px;
+      margin-top: 40px;
+      -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent);
+    }
 
     img {
       object-fit: cover;
@@ -336,5 +372,11 @@ button {
     height: 300px;
     object-fit: contain;
     object-position: center;
+    transition: filter 300ms;
+
+    &:hover{
+      filter: none;
+      mask-image: none;
+    }
   }
 }

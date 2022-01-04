@@ -14,19 +14,19 @@ export const MyStack = () => {
         TECHNOLOGIES
       </h1>
       <motion.div className='flex gap-24 px-24'>
-        <div className='html'>
+        <div className='ht techml'>
             <img src={html} alt="" />
         </div>
-        <div className="css">
+        <div className="cs techs">
             <img src = {css} alt = '' />
         </div>
-        <div className="js">
+        <div className="js tech">
             <img src = {js} alt = '' />
         </div>
-        <div className="react">
+        <div className="re techact">
             <img src = {react} alt = '' />
         </div>
-        <div className='git'>
+        <div className='gi techt'>
             <img src={git} alt="" />
         </div>
       </motion.div>

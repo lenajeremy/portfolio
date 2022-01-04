@@ -7,16 +7,16 @@ const Hero: React.FC = () => {
   useEffect(() => {}, [])
 
   return (
-    <div className="hero grid md:grid-cols-2 gap-4 h-3/4 text-center md:text-left content-center">
+    <div className="hero mt-10 md:mt-0 px-4 mb-20 md:md-0 grid md:grid-cols-2 gap-4 h-3/4 text-center md:text-left content-center">
       <div className="absolute blurred-blob rounded-full filter blur-3xl"></div>
       <div className="absolute blurred-blob rounded-full filter blur-3xl"></div>
       <div className="absolute blurred-blob rounded-full filter blur-3xl"></div>
 
       <div className="rounded items-center md:pl-32 w-full h-full space-y-4 md:pt-16 relative order-1 md:order-0">
-        <h1 className="text-3xl md:text-5xl font-semibold md:font-bold">
+        <h1 className="text-4xl md:text-5xl font-semibold md:font-bold">
           I'm Jeremiah Lena
         </h1>
-        <h4 className="text-xl text-gray-700 leading-5 md:leading-10 mb-4">
+        <h4 className="text-xl text-gray-700 leading-8 md:leading-10 mb-4">
           I'm a frontend developer. I enjoy building{' '}
           <span className="text-green-600 custom_underline primary">web</span>{' '}
           and mobile application with{' '}
@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
           user interfaces. I strongly believe that overrall user experience
           should be a priority when building applications.{' '}
         </h4>
-        <div className="flex space-x-4 mt-5">
+        <div className="flex space-x-4 mt-5 justify-center md:justify-none">
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9, rotate: -3 }}
@@ -41,7 +41,7 @@ const Hero: React.FC = () => {
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9, rotate: -3 }}
-            className="hover:bg-green-500 bg-white bg-opacity-30 text-green-500 hover:text-white hover:border-green-500 border border-white rounded-full bg-transparent tracking-wide px-5 py-2 font-bold"
+            className="hover:bg-green-500 bg-white bg-opacity-30 text-green-500 hover:text-white hover:border-green-500 border border-green-300 md:border-white rounded-full bg-transparent tracking-wide px-5 py-2 font-bold"
           >
             See more...
           </motion.button>
