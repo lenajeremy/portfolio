@@ -34,7 +34,7 @@ export const Header: React.FC = () => {
   }, [])
   return (
     <React.Fragment>
-      <header className="header flex md:py-10 justify-between uppercase md:px-32 px-8 py-10">
+      <header className="header flex md:py-10 items-center justify-between uppercase md:px-32 px-8 py-10">
         <Link to="/">
           <motion.div
             style={{ scale, x: translateX }}
@@ -120,6 +120,10 @@ export const Header: React.FC = () => {
               </motion.svg>
             </li>
           </ul>
+        </div>
+        <div className="breadcrumbs flex flex-col md:hidden">
+          <div className="line"></div>
+          <div className="line"></div>
         </div>
       </header>
     </React.Fragment>
