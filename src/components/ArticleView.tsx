@@ -33,7 +33,9 @@ const ArticleView: React.FC = () => {
     const [loading, setLoading] = useState(false)
     const [project, setProject] = useState<ProjectInterface>(state as ProjectInterface)
 
-    // alert(JSON.stringify(state))
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    },[])
     return (
         <div className='article'>
             {
