@@ -524,6 +524,10 @@ button {
   }
 }
 
+.projectContent h1, .projectContent h2, .projectContent h3, .projectContent h4, .projectContent h5, .projectContent h6 {
+  font-weight: bold;
+}
+
 .projectContent h1 {
   font-size: 2.5em;
   margin-bottom: 1em;
@@ -541,9 +545,25 @@ button {
 
 .projectContent p {
   line-height: 2em;
-  font-size: 16px;
-  margin-bottom: 0.8em;
-  margin-top: 0.8em;
+  font-size: 20px;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+@media screen and (max-width: 768px) {
+  .projectContent p {
+    font-size: 16px;
+  }
+}
+
+.projectContent iframe {
+  height: 400px;
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+}
+
+.projectContent img {
+  display: block;
 }
 
 @media screen and (max-width: 768px) {
