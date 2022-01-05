@@ -73,7 +73,7 @@ const Projects = () => {
         className="md:px-10 min-h-screen md:h-screen place-content-center grid gap-4 md:gap-6 md:grid-cols-3 md:grid-rows-2 grid-cols-1 grid-rows-6 md:my-16 my-8"
       >
         {loading ? (
-          <Loader dotColor="bg-white" />
+          <Loader dotColor="bg-green-500" />
         ) : (
           projects.map((project, index) => (
             <Project key={index} project={project} />

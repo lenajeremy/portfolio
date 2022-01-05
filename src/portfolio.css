@@ -313,7 +313,7 @@ button {
 
 @media screen and (max-width: 768px) {
   .project {
-    height: 350px;
+    height: 250px;
   }
 }
 
