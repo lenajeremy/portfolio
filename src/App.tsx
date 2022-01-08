@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './App.css'
 import './portfolio.css'
 import { Header } from './components/Header'
@@ -9,19 +9,23 @@ import { ArticleView } from './components/ArticleView'
 import { NewArticleForm } from './components/NewArticleForm'
 import { MyStack } from './components/MyStack'
 import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom'
-import { AnimatePresence, AnimateSharedLayout } from 'framer-motion'
+import { AnimatePresence, AnimateSharedLayout, useCycle } from 'framer-motion'
 import { Contact } from './components/Contact'
+import { Menu } from './components/Menu'
 
-const HomePage = () => (
-  <React.Fragment>
-    <Header />
-    <Hero />
-    <Projects />
-    <MyStack />
-    <Contact />
-    <Footer />
-  </React.Fragment>
-)
+const HomePage = () => {
+
+  return (
+    <React.Fragment>
+      <Header />
+      <Hero />
+      <Projects />
+      <MyStack />
+      <Contact />
+      <Footer />
+    </React.Fragment>
+  )
+}
 
 const ProjectPage = () => {
   return (
@@ -37,6 +41,7 @@ function App() {
   return (
     <AnimateSharedLayout>
       <AnimatePresence>
+        <Menu />
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<HomePage />} />

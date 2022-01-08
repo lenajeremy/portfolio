@@ -24,7 +24,7 @@ header {
   transition: background-color ease 300ms;
   position: sticky;
   top: 20px;
-  z-index: 999;
+  z-index: 10;
 
   @media screen and (max-width: 768px){
     &{
@@ -56,6 +56,11 @@ header {
     width: 40px;
     justify-content: space-between;
     cursor: pointer;
+    transition: height 300ms ease-out;
+    
+    &:hover{
+      height: 10px;
+    }
 
     .line{
       width: 100%;
@@ -445,3 +450,16 @@ button {
     }
   }
 }
+
+// .menu {
+  
+//   .menuContent{
+//     position: absolute;
+//     height: 100%;
+//     width: 100%;
+//     top: 0;
+//     left: 0;
+//     bottom: 0;
+//     right: 0;
+//   }
+// }

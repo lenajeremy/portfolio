@@ -9,7 +9,7 @@ import {
   useMotionValue,
 } from 'framer-motion'
 
-export const Header: React.FC = () => {
+export const Header: React.FC<{openMenu?: any}> = ({openMenu}) => {
   const { scrollY } = useViewportScroll()
 
   const assumedScrollPositon = useMotionValue(0)
@@ -95,7 +95,7 @@ export const Header: React.FC = () => {
             <motion.span className="logo-p">.</motion.span>
           </motion.div>
         </Link>
-        <div className="header__nav hidden md:block">
+        {/* <div className="header__nav hidden md:block">
           <ul className="flex space-x-10 text-lg align-center">
             <li className="header__navitem--active text-green-500 font-bold">
               <a href="/">Home</a>
@@ -120,11 +120,11 @@ export const Header: React.FC = () => {
               </motion.svg>
             </li>
           </ul>
-        </div>
-        <div className="breadcrumbs flex flex-col md:hidden">
-          <div className="line"></div>
-          <div className="line"></div>
-        </div>
+        </div> */}
+        <motion.div className="breadcrumbs flex flex-col" onClick={() => openMenu && openMenu()}>
+          <motion.div className="line" layoutId='headerLine1' ></motion.div>
+          <motion.div className="line" layoutId = 'headerLine2'></motion.div>
+        </motion.div>
       </header>
     </React.Fragment>
   )

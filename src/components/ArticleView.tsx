@@ -14,6 +14,7 @@ import {
 
 import { useParams, useLocation } from 'react-router'
 import { Loader } from './Loader'
+import { Menu } from './Menu'
 
 const ArticleView: React.FC = () => {
 

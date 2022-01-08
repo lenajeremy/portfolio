@@ -150,7 +150,7 @@ const Project: React.FC<{ project: ProjectInterface }> = ({ project }) => {
           <Link
             state={project}
             to={`/project/${project.slug}`}
-            className="text-xl border-white hover:bg-gray-500 hover:border-gray-500 hover:text-white rounded-full bg-white border text-black tracking-wide px-6 py-3 font-light"
+            className="text-md border-white hover:bg-gray-500 hover:border-gray-500 hover:text-white rounded-full bg-white border text-black tracking-wide px-4 py-2 font-light"
           >
             {' '}
             View Project
