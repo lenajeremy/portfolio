@@ -16,7 +16,6 @@ export const Header: React.FC<{openMenu?: any}> = ({openMenu}) => {
   const width = useTransform(assumedScrollPositon, [0, 150], [window.innerWidth <= 768 ? 20 : 30, 0])
   const opacity = useTransform(assumedScrollPositon, [0, 150], [1, 0])
   const scale = useTransform(assumedScrollPositon, [50, 150], [1, 2])
-  const translateX = useTransform(scale, (value) => window.innerWidth <= 768 ? 0 : (value - 1) * 48)
 
   useEffect(() => {
 
@@ -34,10 +33,10 @@ export const Header: React.FC<{openMenu?: any}> = ({openMenu}) => {
   }, [])
   return (
     <React.Fragment>
-      <header className="header flex md:py-10 items-center justify-between uppercase md:px-32 px-6 py-10">
+      <header className="header flex md:py-10 items-center justify-between uppercase md:px-28 px-6 py-10">
         <Link to="/">
           <motion.div
-            style={{ scale, x: translateX }}
+            style={{ scale }}
             className="header__logo text-green-400 text-2xl font-bold pointer"
           >
             <motion.span className="logo-j1" whileHover={{ y: -6 }}>

@@ -24,7 +24,7 @@ body {
 
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: rgba(31, 31, 31, 0.863);
+    background-color: #0e0d0d;
   }
 }
 
@@ -40,12 +40,6 @@ header {
 @media screen and (max-width: 768px) {
   header {
     top: 0;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  header .header__logo {
-    color: white;
   }
 }
 
@@ -208,37 +202,34 @@ button {
 }
 
 .hero h1, .hero h4 {
-  color: white;
+  color: black;
   position: relative;
   z-index: 1;
 }
 
 .hero h4 {
   color: black;
-  margin-bottom: 20px !important;
+  margin-bottom: 10px !important;
 }
 
 @media (prefers-color-scheme: dark) {
   .hero h4 {
     color: #eee;
   }
-}
-
-@media screen and (max-width: 768px) and (prefers-color-scheme: light) {
   .hero h1 {
-    color: black;
+    color: white;
   }
 }
 
 .hero .blurred-blob {
   width: 500px;
   height: 500px;
-  opacity: 0.7;
+  opacity: 0;
 }
 
 @media (prefers-color-scheme: dark) {
   .hero .blurred-blob {
-    opacity: 0.2;
+    opacity: 0;
   }
 }
 
@@ -272,6 +263,8 @@ button {
   width: 350px;
   height: 450px;
   overflow: hidden;
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(70%, black), to(transparent));
+  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent);
 }
 
 @media screen and (max-width: 768px) {
@@ -329,21 +322,22 @@ button {
 }
 
 .project .project__content {
-  background: rgba(54, 54, 54, 0.8);
+  background: rgba(54, 54, 54, 0.719);
+  -webkit-backdrop-filter: grayscale(1);
+          backdrop-filter: grayscale(1);
   -webkit-transform: scale(1) translate(0%, 0%);
           transform: scale(1) translate(0%, 0%);
-  height: 100%;
   width: 100%;
-  -webkit-transition: opacity 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
   opacity: 0;
 }
 
 .project .project__image {
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-  transition: -webkit-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
 }
 
 .project:hover .project__content,
@@ -353,8 +347,8 @@ button {
 
 .project:hover .project__image,
 .project--hover .project__image {
-  -webkit-transform: scale(1.05) rotate(-2deg);
-          transform: scale(1.05) rotate(-2deg);
+  -webkit-transform: scale(1.05) rotate(-3deg);
+          transform: scale(1.05) rotate(-3deg);
 }
 
 .loaderContainer {
