@@ -17,9 +17,9 @@ const Hero: React.FC = () => {
           I'm Jeremiah Lena
         </h1>
         <h4 className="text-lg text-gray-700 leading-8 md:leading-10 mb-4">
-          I'm a frontend developer. I enjoy building{' '}
+          I'm a Lagos-based frontend engineer who enjoys building{' '}
           <span className="text-green-600 custom_underline primary">web</span>{' '}
-          and mobile application with{' '}
+          and mobile applications with{' '}
           <span className="custom_underline text-green-600 primary">
             visually appealing
           </span>{' '}

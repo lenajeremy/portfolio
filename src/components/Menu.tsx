@@ -34,7 +34,7 @@ const Menu: React.FC = () => {
               .map((_, i) => (
                 <motion.div
                   key={i}
-                  style={{ backgroundColor: '#10b981', width: '25%' }}
+                  style={{ backgroundColor: 'rgb(16 16 16)', width: '25%' }}
                   initial={{ height: 0 }}
                   animate={{
                     height: '100%',
@@ -58,11 +58,6 @@ const Menu: React.FC = () => {
               animate="in"
               exit="out"
             >
-              <div className="flex justify-end">
-                <CloseMenu {...{ toggleMenu }} />
-              </div>
-
-              <h1 className="text-5xl font-bold text-white text-center">J.</h1>
 
               <div className="flex w-full h-full items-center justify-center">
                 <nav className="">
@@ -90,21 +85,21 @@ const Menu: React.FC = () => {
 
 export { Menu }
 
-const CloseMenu: React.FC<{ toggleMenu: any }> = ({ toggleMenu }) => {
-  return (
-    <motion.div className="breadcrumbs flex flex-col" onClick={toggleMenu}>
-      <motion.div
-        className="line"
-        initial={{ rotate: 0 }}
-        animate={{ backgroundColor: 'white', rotate: '-45deg' }}
-        exit={{ rotate: 0 }}
-      ></motion.div>
-      <motion.div
-        className="line"
-        initial={{ rotate: 0 }}
-        animate={{ backgroundColor: 'white', rotate: '45deg' }}
-        exit={{ rotate: 0 }}
-      ></motion.div>
-    </motion.div>
-  )
-}
+// const CloseMenu: React.FC<{ toggleMenu: any }> = ({ toggleMenu }) => {
+//   return (
+//     <motion.div className="breadcrumbs flex flex-col" onClick={toggleMenu}>
+//       <motion.div
+//         className="line"
+//         initial={{ rotate: 0 }}
+//         animate={{ backgroundColor: 'white', rotate: '-45deg' }}
+//         exit={{ rotate: 0 }}
+//       ></motion.div>
+//       <motion.div
+//         className="line"
+//         initial={{ rotate: 0 }}
+//         animate={{ backgroundColor: 'white', rotate: '45deg' }}
+//         exit={{ rotate: 0 }}
+//       ></motion.div>
+//     </motion.div>
+//   )
+// }

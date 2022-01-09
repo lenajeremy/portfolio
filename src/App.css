@@ -9,6 +9,11 @@ html:not(.dark):not(.light){
     
 }
 
+::selection{
+    background-color: #10b981;
+    color: white;
+}
+
 html.dark{
     color-scheme: dark;
 }

@@ -24,7 +24,7 @@ header {
   transition: background-color ease 300ms;
   position: sticky;
   top: 20px;
-  z-index: 10;
+  z-index: 100000000;
 
   @media screen and (max-width: 768px){
     &{
@@ -420,24 +420,46 @@ button {
     }
   }
 
-  img {
-    margin-top: 1em;
-    filter: grayscale(1);
-    mask-image: linear-gradient(to top, transparent, pink 90%);
-    width: 300px;
-    height: 300px;
-    object-fit: contain;
-    object-position: center;
-    transition: filter 300ms;
+  // img {
+  //   margin-top: 1em;
+  //   filter: grayscale(1);
+  //   mask-image: linear-gradient(to top, transparent, pink 90%);
+  //   width: 300px;
+  //   height: 300px;
+  //   object-fit: contain;
+  //   object-position: center;
+  //   transition: filter 300ms;
 
-    &:hover{
-      filter: none;
-      mask-image: none;
-    }
+  //   &:hover{
+  //     filter: none;
+  //     mask-image: none;
+  //   }
 
-    @media screen and (max-width: 768px) {
-      width: 150px;
-      height: 150px;
+  //   @media screen and (max-width: 768px) {
+  //     width: 150px;
+  //     height: 150px;
+  //   }
+  // }
+
+  .stackContainer{
+    align-items: flex-start;
+    align-self: flex-start;
+    gap: 20px;
+  }
+
+  .stack{
+    padding: 10px 20px;
+    position: relative;
+    cursor: pointer;
+
+    &:before{
+      content: '';
+      position: absolute;
+      width: 3px;
+      height: 100%;
+      background-color: white;
+      left: 0;
+      top: 0; 
     }
   }
 }
@@ -460,10 +482,26 @@ button {
   }
 }
 
+.resumeDownload{
+  position: relative;
 
-// #menu {
-  
-.mainContent{
-  margin-top: 30px;
+  &::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+    opacity: 0.8;
+    left: -10px;
+    top: 10px;
+    z-index: -1;
+    transition: top 0.3ms ease, left 0.35ms ease;
+  }
+
+  &:focus{
+    &::before{
+      top: 8px;
+      left: -8px;
+    }
+  }
 }
-// }

@@ -105,7 +105,7 @@ const Project: React.FC<{ project: ProjectInterface }> = ({ project }) => {
           />
           <div className="project__content p-4 flex flex-col justify-center text-center items-center absolute inset-0 project__content--hover w-full h-60">
             <div className="flex gap-8">
-              <Link target="_blank" to={project.githubURL}>
+              <a target="_blank" href={project.githubURL}>
                 <button className="border-gray-100 rounded-full bg-transparent border tracking-wide p-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -119,8 +119,8 @@ const Project: React.FC<{ project: ProjectInterface }> = ({ project }) => {
                     />
                   </svg>
                 </button>
-              </Link>
-              <Link to={project.liveURL} target="_blank">
+              </a>
+              <a href={project.liveURL} target="_blank">
                 <button className="border-gray-100 rounded-full bg-transparent border tracking-wide p-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -134,7 +134,7 @@ const Project: React.FC<{ project: ProjectInterface }> = ({ project }) => {
                     />
                   </svg>
                 </button>
-              </Link>
+              </a>
 
               <Link to={`/project/${project.slug}`} state={project}>
                 <button className="border-gray-100 rounded-full bg-transparent border tracking-wide p-2">

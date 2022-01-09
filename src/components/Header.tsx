@@ -126,27 +126,18 @@ export const Header: React.FC = () => {
             </li>
           </ul>
         </div> */}
-        <AnimatePresence>
-          {!showMenu && (
-            <motion.div
-              className="breadcrumbs flex flex-col"
-              onClick={toggleMenu}
-            >
-              <motion.div
-                className="line"
-                layoutId="headerLine1"
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0, y: -60, background: 'white' }}
-              ></motion.div>
-              <motion.div
-                className="line"
-                layoutId="headerLine2"
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0, y: -50, background: 'white', transition: {delay: 0.1} }}
-              ></motion.div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+        <motion.div className="breadcrumbs flex flex-col" onClick={toggleMenu}>
+          <motion.div
+            className="line"
+            layoutId="headerLine1"
+            animate={{ opacity: 1, rotate: showMenu ? '45deg' : 0 }}
+          ></motion.div>
+          <motion.div
+            className="line"
+            layoutId="headerLine2"
+            animate={{ opacity: 1, rotate: showMenu ? '-45deg' : 0 }}
+          ></motion.div>
+        </motion.div>
       </header>
     </React.Fragment>
   )
