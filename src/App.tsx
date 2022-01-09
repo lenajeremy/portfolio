@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import './App.css'
 import './portfolio.css'
 import { Header } from './components/Header'
@@ -12,9 +12,9 @@ import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom'
 import { AnimatePresence, AnimateSharedLayout, useCycle } from 'framer-motion'
 import { Contact } from './components/Contact'
 import { Menu } from './components/Menu'
+import { ShowMenuContext } from './ctxs/ShowMenu'
 
 const HomePage = () => {
-
   return (
     <React.Fragment>
       <Header />
@@ -38,22 +38,27 @@ const ProjectPage = () => {
 }
 
 function App() {
+  
+  const [showMenu, toggleMenu] = useCycle(false, true)
+
   return (
-    <AnimateSharedLayout>
-      <AnimatePresence>
-        <Menu />
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/project" element={<ProjectPage />}>
-              <Route path="" element={<p>No article found</p>} />
-              <Route path=":projectSlug" element={<ArticleView />} />
-            </Route>
-            <Route path="/new" element={<NewArticleForm />} />
-          </Routes>
-        </BrowserRouter>
-      </AnimatePresence>
-    </AnimateSharedLayout>
+    <ShowMenuContext.Provider value={{ showMenu, toggleMenu }}>
+      <AnimateSharedLayout>
+        <AnimatePresence>
+          <Menu />
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/project" element={<ProjectPage />}>
+                <Route path="" element={<p>No article found</p>} />
+                <Route path=":projectSlug" element={<ArticleView />} />
+              </Route>
+              <Route path="/new" element={<NewArticleForm />} />
+            </Routes>
+          </BrowserRouter>
+        </AnimatePresence>
+      </AnimateSharedLayout>
+    </ShowMenuContext.Provider>
   )
 }
 

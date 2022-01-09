@@ -154,14 +154,14 @@ const Project: React.FC<{ project: ProjectInterface }> = ({ project }) => {
             </div>
           </div>
         </div>
-        <div className="p-4 flex flex-col gap-y-1">
+        <div className="p-4 pl-0 flex flex-col gap-y-1">
           <p className="text-white text-2xl uppercase tracking-6">
             {project.title}
           </p>
           <Link
             to={`/project/${project.slug}`}
             state={project}
-            className="text-gray-300 hover:text-white"
+            className="text-gray-300 hover:text-green-500 hover:font-bold"
           >
             Read More
           </Link>

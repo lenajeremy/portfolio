@@ -1,5 +1,7 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useContext } from 'react'
 import { Link } from 'react-router-dom'
+
+import { ShowMenuContext } from '../ctxs/ShowMenu'
 
 import {
   animate,
@@ -7,26 +9,30 @@ import {
   useTransform,
   useViewportScroll,
   useMotionValue,
+  AnimatePresence,
 } from 'framer-motion'
 
-export const Header: React.FC<{openMenu?: any}> = ({openMenu}) => {
+export const Header: React.FC = () => {
   const { scrollY } = useViewportScroll()
 
   const assumedScrollPositon = useMotionValue(0)
-  const width = useTransform(assumedScrollPositon, [0, 150], [window.innerWidth <= 768 ? 20 : 30, 0])
+  const width = useTransform(
+    assumedScrollPositon,
+    [0, 150],
+    [window.innerWidth <= 768 ? 20 : 30, 0],
+  )
   const opacity = useTransform(assumedScrollPositon, [0, 150], [1, 0])
   const scale = useTransform(assumedScrollPositon, [50, 150], [1, 2])
 
+  const { toggleMenu, showMenu } = useContext(ShowMenuContext)
+
   useEffect(() => {
-
     scrollY.onChange((scrollPosition) => {
-
       if (scrollPosition >= 150) {
-        animate(assumedScrollPositon, 150, {duration: 0.5})
+        animate(assumedScrollPositon, 150, { duration: 0.5 })
       } else {
-        animate(assumedScrollPositon, 0, {duration: 0.5})
+        animate(assumedScrollPositon, 0, { duration: 0.5 })
       }
-
     })
 
     // return unsubscribe()
@@ -120,10 +126,27 @@ export const Header: React.FC<{openMenu?: any}> = ({openMenu}) => {
             </li>
           </ul>
         </div> */}
-        <motion.div className="breadcrumbs flex flex-col" onClick={() => openMenu && openMenu()}>
-          <motion.div className="line" layoutId='headerLine1' ></motion.div>
-          <motion.div className="line" layoutId = 'headerLine2'></motion.div>
-        </motion.div>
+        <AnimatePresence>
+          {!showMenu && (
+            <motion.div
+              className="breadcrumbs flex flex-col"
+              onClick={toggleMenu}
+            >
+              <motion.div
+                className="line"
+                layoutId="headerLine1"
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0, y: -60, background: 'white' }}
+              ></motion.div>
+              <motion.div
+                className="line"
+                layoutId="headerLine2"
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0, y: -50, background: 'white', transition: {delay: 0.1} }}
+              ></motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </header>
     </React.Fragment>
   )
