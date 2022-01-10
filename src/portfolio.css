@@ -601,6 +601,12 @@ button {
   gap: 20px;
 }
 
+@media screen and (max-width: 768px) {
+  .technologies .stackContainer {
+    gap: 10px;
+  }
+}
+
 .technologies .stack {
   padding: 10px 20px;
   position: relative;
