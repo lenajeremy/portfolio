@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 const AboutMe: React.FC = () => {
   return (
     <div className="md:pl-20 space-y-6 md:w-1/2 w-full">
-      <p className="text-lg leading-8 md:leading-10">
+      <p className="text-md md:text-lg leading-8 md:leading-10">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi
         necessitatibus sint incidunt similique quaerat facilis quas ut voluptas
         aperiam tempore exercitationem quisquam veniam perspiciatis, ullam
