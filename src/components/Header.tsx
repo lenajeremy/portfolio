@@ -130,12 +130,12 @@ export const Header: React.FC = () => {
           <motion.div
             className="line"
             layoutId="headerLine1"
-            animate={{ opacity: 1, rotate: showMenu ? '45deg' : 0 }}
+            animate={{ opacity: 1, rotate: showMenu ? '45deg' : 0, x: showMenu ? 6 : 0 }}
           ></motion.div>
           <motion.div
             className="line"
             layoutId="headerLine2"
-            animate={{ opacity: 1, rotate: showMenu ? '-45deg' : 0 }}
+            animate={{ opacity: 1, rotate: showMenu ? '-45deg' : 0, x: showMenu ? 6 : 0 }}
           ></motion.div>
         </motion.div>
       </header>
