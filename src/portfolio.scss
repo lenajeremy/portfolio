@@ -445,6 +445,10 @@ button {
     align-items: flex-start;
     align-self: flex-start;
     gap: 20px;
+
+    @media screen and (max-width: 768px){
+      gap: 10px;
+    }
   }
 
   .stack{
