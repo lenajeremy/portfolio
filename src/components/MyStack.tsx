@@ -59,7 +59,7 @@ export const MyStack = () => {
       <h1 className="text-center text-4xl md:text-8xl uppercase text-white font-bold primary">
         SKILLS
       </h1>
-      <div className="flex-col md:flex-row flex gap-10 my-10">
+      <div className="flex-col md:flex-row flex gap-10 my-10 px-4">
         <AboutMe />
         <Technologies />
       </div>
