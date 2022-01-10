@@ -604,6 +604,9 @@ button {
 @media screen and (max-width: 768px) {
   .technologies .stackContainer {
     gap: 10px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
