@@ -1,13 +1,9 @@
 import { motion } from 'framer-motion'
-import html from '../assets/icons/html.png'
-import css from '../assets/icons/css.png'
-import js from '../assets/icons/js.png'
-import react from '../assets/icons/react.png'
-import git from '../assets/icons/git.png'
+
 
 const AboutMe: React.FC = () => {
   return (
-    <div className="pl-20 space-y-6 w-1/2">
+    <div className="md:pl-20 space-y-6 md:w-1/2 w-full">
       <p className="text-lg leading-8 md:leading-10">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi
         necessitatibus sint incidunt similique quaerat facilis quas ut voluptas
@@ -48,7 +44,7 @@ const Technologies: React.FC = () => {
   ]
 
   return (
-    <div className='flex flex-wrap w-1/2 stackContainer pr-10'>
+    <div className='flex flex-wrap w-full md:w-1/2 stackContainer md:pr-10'>
       {technologies.map((tech) => (
         <p className='stack bg-green-800'>{tech}</p>
       ))}
@@ -63,7 +59,7 @@ export const MyStack = () => {
       <h1 className="text-center text-4xl md:text-8xl uppercase text-white font-bold primary">
         SKILLS
       </h1>
-      <div className="flex gap-10 my-10">
+      <div className="flex-col md:flex-row flex gap-10 my-10">
         <AboutMe />
         <Technologies />
       </div>
