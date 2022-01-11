@@ -390,6 +390,11 @@ button {
     font-size: 1.8em;
     margin-bottom: 0.9em;
   }
+
+  h4{
+    font-size: 1.5em;
+    margin-bottom:  0.6em;
+  }
   
   p, ul {
     line-height: 2em;
@@ -408,8 +413,9 @@ button {
 
   ul{
     list-style-type: disc;
+    list-style-position: inside;
   }
-  
+
   iframe{
     height: 400px;
     margin-top: 2.5em;
