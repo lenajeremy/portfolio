@@ -390,18 +390,26 @@ button {
     font-size: 1.8em;
     margin-bottom: 0.9em;
   }
-  p {
+  
+  p, ul {
     line-height: 2em;
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 1em;
     margin-top: 1em;
-    color: lightgray;
+    
+    @media (prefers-color-scheme: dark){
+      color: lightgray;
+    }
 
     @media screen and (max-width:768px) {
       font-size: 14px;
     }
   }
 
+  ul{
+    list-style-type: disc;
+  }
+  
   iframe{
     height: 400px;
     margin-top: 2.5em;

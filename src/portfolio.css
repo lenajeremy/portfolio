@@ -558,18 +558,27 @@ button {
   margin-bottom: 0.9em;
 }
 
-.projectContent p {
+.projectContent p, .projectContent ul {
   line-height: 2em;
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 1em;
   margin-top: 1em;
-  color: lightgray;
+}
+
+@media (prefers-color-scheme: dark) {
+  .projectContent p, .projectContent ul {
+    color: lightgray;
+  }
 }
 
 @media screen and (max-width: 768px) {
-  .projectContent p {
+  .projectContent p, .projectContent ul {
     font-size: 14px;
   }
+}
+
+.projectContent ul {
+  list-style-type: disc;
 }
 
 .projectContent iframe {
