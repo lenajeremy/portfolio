@@ -22,7 +22,7 @@ export const Header: React.FC = () => {
     [window.innerWidth <= 768 ? 20 : 30, 0],
   )
   const opacity = useTransform(assumedScrollPositon, [0, 150], [1, 0])
-  const scale = useTransform(assumedScrollPositon, [50, 150], [1, 2])
+  const scale = useTransform(assumedScrollPositon, [50, 150], [1, window.innerWidth  < 700 ? 1 : 2])
 
   const { toggleMenu, showMenu } = useContext(ShowMenuContext)
 
