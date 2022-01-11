@@ -60,7 +60,7 @@ const Menu: React.FC = () => {
             >
 
               <div className="flex w-full h-full items-center justify-center">
-                <nav className="">
+                <nav className="text-white">
                   <ul className="space-y-20">
                     <motion.li animate = {{y: 20, transition: {delay: 0.2}}} className="text-4xl uppercase tracking-wide">
                       <Link to="/">Home</Link>
