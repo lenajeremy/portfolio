@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
           I'm Jeremiah Lena
         </h1>
         <h4 className="text-lg text-gray-700 leading-8 md:leading-10 mb-4">
-          I'm a Lagos-based frontend engineer who enjoys building{' '}
+          I'm a Lagos-based software engineer who specialized in building{' '}
           <span className="text-green-600 custom_underline primary">web</span>{' '}
           and mobile applications with{' '}
           <span className="custom_underline text-green-600 primary">
@@ -27,8 +27,11 @@ const Hero: React.FC = () => {
           <span className="custom_underline text-green-600 primary">
             interactive
           </span>{' '}
-          user interfaces. I strongly believe that overrall user experience
-          should be a priority when building applications.{' '}
+          user interfaces, paying close attention to{' '}
+          <span className="custom_underline text-green-600 primary">
+            detail
+          </span>{' '}
+          and prioritizing performance{' '}
         </h4>
         <div className="flex space-x-4 mt-5 justify-center md:justify-start md:justify-none">
           <motion.button
