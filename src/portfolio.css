@@ -339,6 +339,10 @@ button {
   transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
 }
 
+.project .text-white {
+  color: canvastext;
+}
+
 .project:hover .project__content,
 .project--hover .project__content {
   opacity: 1;
@@ -642,6 +646,16 @@ button {
   background-color: white;
   left: 0;
   top: 0;
+}
+
+@media (prefers-color-scheme: light) {
+  .technologies .stack {
+    background-color: #313131;
+    color: white;
+  }
+  .technologies .stack::before {
+    background-color: black;
+  }
 }
 
 .breadcrumbs {

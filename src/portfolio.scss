@@ -257,6 +257,9 @@ button {
   .project__image {
     transition: transform 0.4s ease-in-out;
   }
+  .text-white{
+    color: canvastext;
+  }
 }
 .project:hover,
 .project--hover {
@@ -436,6 +439,27 @@ button {
     }
   }
 
+  // img {
+  //   margin-top: 1em;
+  //   filter: grayscale(1);
+  //   mask-image: linear-gradient(to top, transparent, pink 90%);
+  //   width: 300px;
+  //   height: 300px;
+  //   object-fit: contain;
+  //   object-position: center;
+  //   transition: filter 300ms;
+
+  //   &:hover{
+  //     filter: none;
+  //     mask-image: none;
+  //   }
+
+  //   @media screen and (max-width: 768px) {
+  //     width: 150px;
+  //     height: 150px;
+  //   }
+  // }
+
   .stackContainer{
     align-items: flex-start;
     align-self: flex-start;
@@ -460,6 +484,15 @@ button {
       background-color: white;
       left: 0;
       top: 0; 
+    }
+    @media (prefers-color-scheme:light){
+      background-color: rgb(49, 49, 49);
+      color: white;
+      
+      &::before{
+        background-color: black
+      }
+      
     }
   }
 }
@@ -507,5 +540,5 @@ button {
 }
 
 .contact {
-  // height: 50vh;
+  // height: 
 }
