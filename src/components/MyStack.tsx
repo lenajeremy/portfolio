@@ -1,26 +1,21 @@
-import { motion } from 'framer-motion'
-
-
 const AboutMe: React.FC = () => {
   return (
     <div className="md:pl-20 space-y-6 md:w-1/2 w-full">
       <p className="text-md md:text-lg leading-8 md:leading-10">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi
-        necessitatibus sint incidunt similique quaerat facilis quas ut voluptas
-        aperiam tempore exercitationem quisquam veniam perspiciatis, ullam
-        ratione quod temporibus sed qui.
+        I'm a passionate frontend engineer who enjoys building beautiful and
+        interactive websites. I have a knack for crafting immersive and
+        user-friendly websites.
       </p>
-      <p className="text-lg leadinng-8 md:leading-10">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum unde
-        odio iusto alias quia totam repudiandae vero suscipit perferendis
-        dolorem?
+      <p className="md:text-lg leadinng-8 md:leading-10">
+        While ensuring applications are beautiful and visually appealing, I
+        consider it priority that applications must be performance and secure,
+        ensuring that users get the best experience possible.
       </p>
 
-      <p className="text-lg leadinng-8 md:leading-10">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum unde
-        odio iusto alias quia totam repudiandae vero suscipit perferendis
-        dolorem? Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-        Asperiores, porro.
+      <p className="md:text-lg leadinng-8 md:leading-10">
+        While I'm not coding, reading or writing a tech-related article, I spend
+        time playing the guitar and singing, making music to please my ears. I
+        also love being around family and friends☺☺.
       </p>
     </div>
   )
@@ -44,9 +39,9 @@ const Technologies: React.FC = () => {
   ]
 
   return (
-    <div className='flex flex-wrap w-full md:w-1/2 stackContainer md:pr-10'>
+    <div className="flex flex-wrap w-full md:w-1/2 stackContainer md:pr-20 md:pt-8">
       {technologies.map((tech) => (
-        <p className='stack bg-green-800'>{tech}</p>
+        <p className="stack bg-green-800">{tech}</p>
       ))}
     </div>
   )
@@ -55,19 +50,15 @@ const Technologies: React.FC = () => {
 export const MyStack = () => {
   return (
     <>
-    <div className="mt-10 md:mt-0 md:p-10 technologies min-h-screen overflow-hidden flex flex-col justify-center">
-      <h1 className="text-center text-4xl md:text-8xl uppercase text-white font-bold primary">
-        SKILLS
-      </h1>
-      <div className="flex-col md:flex-row flex gap-10 my-10 px-4">
-        <AboutMe />
-        <Technologies />
+      <div className="mt-10 md:mt-0 md:p-10 technologies min-h-screen overflow-hidden flex flex-col justify-center">
+        <h1 className="text-center text-4xl md:text-8xl uppercase text-white font-bold primary">
+          SKILLS
+        </h1>
+        <div className="flex-col md:flex-row flex gap-10 my-10 px-4">
+          <AboutMe />
+          <Technologies />
+        </div>
       </div>
-    </div>
-
-    <div className='h-60 w-full items-center justify-center flex'>
-      <button className='block text-3xl resumeDownload tracking-wide bg-green-800 px-16 py-10'>DOWNLOAD RESUME</button>
-    </div>
     </>
   )
 }

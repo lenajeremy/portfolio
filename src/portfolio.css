@@ -67,13 +67,9 @@ header .breadcrumbs {
   transition: height 300ms ease-out;
 }
 
-header .breadcrumbs:hover {
-  height: 10px;
-}
-
 header .breadcrumbs .line {
   width: 100%;
-  height: 2px;
+  height: 1px;
   background-color: #10b981;
 }
 
@@ -285,11 +281,13 @@ button {
 }
 
 .projectsContainer,
+.contact,
 .technologies {
   overflow-x: hidden;
 }
 
 .projectsContainer h1,
+.contact h1,
 .technologies h1 {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#1f1f1f), to(#ababab));
   background-image: linear-gradient(to bottom, #1f1f1f, #ababab);
@@ -300,6 +298,7 @@ button {
 
 @media (prefers-color-scheme: light) {
   .projectsContainer h1,
+  .contact h1,
   .technologies h1 {
     background-image: -webkit-gradient(linear, left top, left bottom, from(#b1b1b1), to(#ffffff));
     background-image: linear-gradient(to bottom, #b1b1b1, #ffffff);
@@ -617,7 +616,7 @@ button {
           align-items: flex-start;
   -ms-flex-item-align: start;
       align-self: flex-start;
-  gap: 20px;
+  gap: 14px;
 }
 
 @media screen and (max-width: 768px) {
@@ -630,7 +629,7 @@ button {
 }
 
 .technologies .stack {
-  padding: 10px 20px;
+  padding: 8px 16px;
   position: relative;
   cursor: pointer;
 }

@@ -74,7 +74,7 @@ const Projects = () => {
       </motion.h1>
       <section
         id="section2"
-        className="md:px-0 min-h-screen md:h-screen place-content-center grid gap-12 gap-y-16 md:grid-cols-3 md:grid-rows-2 grid-cols-1 grid-rows-6 md:my-24 my-8"
+        className="md:px-0 min-h-screen place-content-center grid gap-12 gap-y-16 md:grid-cols-3 md:grid-rows-2 grid-cols-1 grid-rows-6 md:my-24 my-8"
       >
         {loading ? (
           <Loader dotColor="bg-green-500" />
@@ -92,7 +92,7 @@ const Project: React.FC<{ project: ProjectInterface }> = ({ project }) => {
   return (
     <>
       <motion.div
-        className="project relative md:rounded-sm overflow-hidden h-80"
+        className="project relative md:rounded-sm overflow-hidden"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
       >
@@ -140,14 +140,13 @@ const Project: React.FC<{ project: ProjectInterface }> = ({ project }) => {
                 <button className="border-gray-100 rounded-full bg-transparent border tracking-wide p-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
+                    height="20px"
                     viewBox="0 0 24 24"
+                    width="20px"
+                    fill="#fff"
                   >
-                    <path
-                      fill="white"
-                      d="M12 2c2.757 0 5 2.243 5 5.001 0 2.756-2.243 5-5 5s-5-2.244-5-5c0-2.758 2.243-5.001 5-5.001zm0-2c-3.866 0-7 3.134-7 7.001 0 3.865 3.134 7 7 7s7-3.135 7-7c0-3.867-3.134-7.001-7-7.001zm6.369 13.353c-.497.498-1.057.931-1.658 1.302 2.872 1.874 4.378 5.083 4.972 7.346h-19.387c.572-2.29 2.058-5.503 4.973-7.358-.603-.374-1.162-.811-1.658-1.312-4.258 3.072-5.611 8.506-5.611 10.669h24c0-2.142-1.44-7.557-5.631-10.647z"
-                    />
+                    <path d="M0 0h24v24H0V0z" fill="none" />
+                    <path d="M12 6c3.79 0 7.17 2.13 8.82 5.5C19.17 14.87 15.79 17 12 17s-7.17-2.13-8.82-5.5C4.83 8.13 8.21 6 12 6m0-2C7 4 2.73 7.11 1 11.5 2.73 15.89 7 19 12 19s9.27-3.11 11-7.5C21.27 7.11 17 4 12 4zm0 5c1.38 0 2.5 1.12 2.5 2.5S13.38 14 12 14s-2.5-1.12-2.5-2.5S10.62 9 12 9m0-2c-2.48 0-4.5 2.02-4.5 4.5S9.52 16 12 16s4.5-2.02 4.5-4.5S14.48 7 12 7z" />
                   </svg>
                 </button>
               </Link>
@@ -155,13 +154,13 @@ const Project: React.FC<{ project: ProjectInterface }> = ({ project }) => {
           </div>
         </div>
         <div className="p-4 pl-0 flex flex-col gap-y-1">
-          <p className="text-white text-2xl uppercase tracking-6">
+          <p className="text-white text-2xl uppercase tracking-6 font-semibold">
             {project.title}
           </p>
           <Link
             to={`/project/${project.slug}`}
             state={project}
-            className="text-gray-300 hover:text-green-500 hover:font-bold"
+            className="text-gray-300 hover:text-green-500 text-lg"
           >
             Read More
           </Link>

@@ -130,7 +130,7 @@ export const Header: React.FC = () => {
             </li>
           </ul>
         </div> */}
-        <motion.div className="breadcrumbs flex flex-col" onClick={toggleMenu}>
+        <motion.div animate = {{height: showMenu ? 2 : 12}} className="breadcrumbs flex flex-col" onClick={toggleMenu}>
           <motion.div
             className="line"
             layoutId="headerLine1"
