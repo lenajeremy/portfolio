@@ -755,10 +755,15 @@ button {
 
 @media screen and (max-width: 768px) {
   .contact {
-    paddding: 1.5em;
+    padding: 1.5em;
   }
   .contact form {
     width: 100%;
+  }
+  .contact form input,
+  .contact form textarea,
+  .contact form button {
+    font-size: 16px;
   }
 }
 /*# sourceMappingURL=portfolio.css.map */
