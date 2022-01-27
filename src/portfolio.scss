@@ -486,11 +486,11 @@ button {
       top: 0; 
     }
     @media (prefers-color-scheme:light){
-      background-color: rgb(49, 49, 49);
+      background-color: rgb(75, 75, 75);
       color: white;
       
       &::before{
-        background-color: black
+        background-color: black;
       }
       
     }
@@ -515,30 +515,61 @@ button {
   }
 }
 
-.resumeDownload{
-  position: relative;
+.contact {
+  background-image: url('https://shotstash.com/wp-content/uploads/2018/11/milky-way-stars-1100x733.jpg');
+  padding: 4em;
+  form{
+    flex-direction: column;
+    width: 55%;
+    margin: 3em;
+    display: flex;
+    gap: 1.5em;
 
-  &::before{
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: gray;
-    opacity: 0.8;
-    left: -10px;
-    top: 10px;
-    z-index: -1;
-    transition: top 0.3ms ease, left 0.35ms ease;
-  }
+    label{
+      font-size: 20px;
+      margin-bottom: 10px;
+      display: none;
+    }
 
-  &:focus{
-    &::before{
-      top: 8px;
-      left: -8px;
+    input, textarea, button{
+      width: 100%;
+      height: 80px;
+      padding: 1em;
+      outline: none;
+      background-color: rgb(238, 238, 238);
+      border: 2px solid transparent;
+      display: block;
+      font-size: 18px;
+      color: black;
+
+      &::placeholder{
+        font-size: 20px;
+        color: #1f1f1f;
+      }
+
+      &:focus{
+        border-color: white;
+        color: white;
+        background-color: rgba(54, 54, 54, 0.719);
+      }
+    }
+    textarea {
+      height: 160px;
+    }
+    button{
+      background: #10b981;
+      color: white;
+      font-size: 24px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
     }
   }
-}
 
-.contact {
-  // height: 
+  @media screen and (max-width:768px) {
+    paddding: 1.5em;
+    form{
+      width: 100%;
+    }
+  }
+  
 }

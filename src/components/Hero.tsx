@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
         <h1 className="text-3xl md:text-5xl font-semibold md:font-bold">
           I'm Jeremiah Lena
         </h1>
-        <h4 className="text-lg text-gray-700 leading-8 md:leading-10 mb-4">
+        <h4 className="md:text-lg text-gray-700 leading-8 md:leading-10 mb-4">
           I'm a Lagos-based software engineer who specialized in building{' '}
           <span className="text-green-600 custom_underline primary">web</span>{' '}
           and mobile applications with{' '}

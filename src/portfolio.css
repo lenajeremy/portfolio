@@ -650,7 +650,7 @@ button {
 
 @media (prefers-color-scheme: light) {
   .technologies .stack {
-    background-color: #313131;
+    background-color: #4b4b4b;
     color: white;
   }
   .technologies .stack::before {
@@ -679,26 +679,86 @@ button {
   background-color: #10b981;
 }
 
-.resumeDownload {
-  position: relative;
+.contact {
+  background-image: url("https://shotstash.com/wp-content/uploads/2018/11/milky-way-stars-1100x733.jpg");
+  padding: 4em;
 }
 
-.resumeDownload::before {
-  content: '';
-  position: absolute;
+.contact form {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 55%;
+  margin: 3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5em;
+}
+
+.contact form label {
+  font-size: 20px;
+  margin-bottom: 10px;
+  display: none;
+}
+
+.contact form input, .contact form textarea, .contact form button {
   width: 100%;
-  height: 100%;
-  background-color: gray;
-  opacity: 0.8;
-  left: -10px;
-  top: 10px;
-  z-index: -1;
-  -webkit-transition: top 0.3ms ease, left 0.35ms ease;
-  transition: top 0.3ms ease, left 0.35ms ease;
+  height: 80px;
+  padding: 1em;
+  outline: none;
+  background-color: #eeeeee;
+  border: 2px solid transparent;
+  display: block;
+  font-size: 18px;
+  color: black;
 }
 
-.resumeDownload:focus::before {
-  top: 8px;
-  left: -8px;
+.contact form input::-webkit-input-placeholder, .contact form textarea::-webkit-input-placeholder, .contact form button::-webkit-input-placeholder {
+  font-size: 20px;
+  color: #1f1f1f;
+}
+
+.contact form input:-ms-input-placeholder, .contact form textarea:-ms-input-placeholder, .contact form button:-ms-input-placeholder {
+  font-size: 20px;
+  color: #1f1f1f;
+}
+
+.contact form input::-ms-input-placeholder, .contact form textarea::-ms-input-placeholder, .contact form button::-ms-input-placeholder {
+  font-size: 20px;
+  color: #1f1f1f;
+}
+
+.contact form input::placeholder, .contact form textarea::placeholder, .contact form button::placeholder {
+  font-size: 20px;
+  color: #1f1f1f;
+}
+
+.contact form input:focus, .contact form textarea:focus, .contact form button:focus {
+  border-color: white;
+  color: white;
+  background-color: rgba(54, 54, 54, 0.719);
+}
+
+.contact form textarea {
+  height: 160px;
+}
+
+.contact form button {
+  background: #10b981;
+  color: white;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+@media screen and (max-width: 768px) {
+  .contact {
+    paddding: 1.5em;
+  }
+  .contact form {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=portfolio.css.map */

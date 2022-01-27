@@ -8,7 +8,7 @@ const AboutMe: React.FC = () => {
       </p>
       <p className="md:text-lg leading-8 md:leading-10">
         While ensuring applications are beautiful and visually appealing, I
-        consider it priority that applications must be performance and secure,
+        consider it priority that applications are performant and secure,
         ensuring that users get the best experience possible.
       </p>
 
