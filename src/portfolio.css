@@ -764,6 +764,11 @@ button {
   .contact form textarea,
   .contact form button {
     font-size: 16px;
+    height: 60px;
+    padding: 1em;
+  }
+  .contact form textarea {
+    height: 160px;
   }
 }
 /*# sourceMappingURL=portfolio.css.map */
