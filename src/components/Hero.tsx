@@ -34,20 +34,24 @@ const Hero: React.FC = () => {
           and prioritizing performance{' '}
         </h4>
         <div className="flex space-x-4 mt-5 justify-center md:justify-start md:justify-none">
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9, rotate: -3 }}
-            className="hover:bg-white hover:border-green-500 hover:text-green-500 rounded-full bg-green-500 border border-transparent text-white tracking-wide px-8 py-3 font-bold"
-          >
-            CONNECT
-          </motion.button>
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9, rotate: -3 }}
-            className="hover:bg-green-500 bg-white bg-opacity-30 text-green-500 hover:text-white hover:border-green-500 border border-green-300 md:border-white rounded-full bg-transparent tracking-wide px-5 py-2 font-bold"
-          >
-            See more...
-          </motion.button>
+          <a href="#contact">
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9, rotate: -3 }}
+              className="hover:bg-white hover:border-green-500 hover:text-green-500 rounded-full bg-green-500 border border-transparent text-white tracking-wide px-8 py-3 font-bold"
+            >
+              CONNECT
+            </motion.button>
+          </a>
+          <a href="#skills">
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9, rotate: -3 }}
+              className="hover:bg-green-500 bg-white bg-opacity-30 text-green-500 hover:text-white hover:border-green-500 border border-green-300 md:border-white rounded-full bg-transparent tracking-wide px-5 py-2 font-bold"
+            >
+              See more...
+            </motion.button>
+          </a>
         </div>
       </div>
       <div className="rounded relative p-18 w-full h-full order-1 md-order-0">

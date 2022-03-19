@@ -50,7 +50,7 @@ const Technologies: React.FC = () => {
 export const MyStack = () => {
   return (
     <>
-      <div className="mt-10 md:mt-0 md:p-10 technologies min-h-screen overflow-hidden flex flex-col justify-center">
+      <div className="mt-10 md:mt-0 md:p-10 technologies min-h-screen overflow-hidden flex flex-col justify-center" id = 'skills'>
         <h1 className="text-center text-5xl md:text-8xl uppercase text-white font-bold primary">
           SKILLS
         </h1>

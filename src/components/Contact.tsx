@@ -14,7 +14,7 @@ export const Contact = () => {
   }
 
   return (
-    <motion.div className="contact min-h-screen items-center flex flex-col">
+    <motion.div className="contact min-h-screen items-center flex flex-col" id = 'contact'>
       <h1 className="text-center text-5xl md:text-8xl uppercase text-white font-bold primary">
         CONTACT
       </h1>
