@@ -8,9 +8,9 @@ const Hero: React.FC = () => {
 
   return (
     <div className="hero mt-10 md:mt-0 px-6 mb-20 md:md-0 grid md:grid-cols-2 gap-4 h-3/4 text-center md:text-left content-center">
-      <div className="absolute blurred-blob rounded-full filter blur-3xl"></div>
-      <div className="absolute blurred-blob rounded-full filter blur-3xl"></div>
-      <div className="absolute blurred-blob rounded-full filter blur-3xl"></div>
+      <div className="absolute blurred-blob rounded-full filter blur-3xl hidden"></div>
+      <div className="absolute blurred-blob rounded-full filter blur-3xl hidden"></div>
+      <div className="absolute blurred-blob rounded-full filter blur-3xl hidden"></div>
 
       <div className="rounded items-center md:pl-32 w-full h-full space-y-6 md:pt-16 relative order-1 md:order-0">
         <h1 className="text-3xl md:text-5xl font-semibold md:font-bold">
