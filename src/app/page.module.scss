@@ -1,0 +1,28 @@
+.heading {
+  span {
+    --text-color-rgb: 69, 69, 69;
+    display: inline-block;
+    background: linear-gradient(
+      to right,
+      rgb(var(--foreground-rgb)) 2%,
+      rgb(var(--text-color-rgb))
+    );
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+.pageContainer {
+  padding: 0 12px;
+}
+
+.headingContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.developerDescription {
+  width: 85%;
+  font-size: 16px;
+}

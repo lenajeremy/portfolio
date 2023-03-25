@@ -1,0 +1,18 @@
+.animatedCursorText {
+  position: relative;
+}
+
+span#cursor {
+  background: rgb(var(--text-color-rgb));
+  background-clip: text;
+  animation: pulsing 800ms ease-in-out infinite alternate-reverse;
+}
+
+@keyframes pulsing {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
