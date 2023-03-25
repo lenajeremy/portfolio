@@ -1,0 +1,42 @@
+.navLink {
+  --active-bg-rgb: 43, 43, 43;
+  --active-border-rgb: 57, 57, 57;
+
+  padding: 8px 12px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  background-color: transparent;
+  transition: color ease-in-out 400ms, border-color ease-in-out 400ms, background-color ease-in-out 400ms;
+
+  svg:not([data-style-type=fill]) {
+    stroke: rgb(var(--text-color-rgb));
+    transition: stroke ease-in-out 400ms;
+  }
+
+  svg[data-style-type=fill] {
+    fill: rgb(var(--text-color-rgb));
+    transition: fill ease-in-out 400ms;
+  }
+
+  &:hover,
+  &.active {
+    color: rgb(var(--foreground-rgb));
+
+    svg:not([data-style-type=fill]) {
+      stroke: rgb(var(--foreground-rgb));
+    }
+
+    svg[data-style-type=fill] {
+      fill: rgb(var(--foreground-rgb));
+    }
+  }
+
+  &.active {
+    border-color: rgb(var(--active-border-rgb));
+    background-color: rgb(var(--active-bg-rgb));
+  }
+}

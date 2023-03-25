@@ -1,0 +1,56 @@
+.sidebarContainer {
+    background-color: rgb(var(--sidebar-background-rgb));
+    padding: 40px 24px;
+    height: 100vh;
+    width: var(--sidebar-width);
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    border-right: 1px solid rgb(var(--border-color-rgb));
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    
+    .heading {
+        display: flex;
+        gap: 12px;
+
+        img {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 50%;
+        }
+
+        > div {
+            flex: 1
+        }
+
+        p {
+            line-height: 20px;
+        }
+    }
+
+    .navContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        .navHeading {
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+            font-size: 10px;
+            line-height: 16px;
+            font-weight: 600;
+            padding: 0 12px;
+        }
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+}
