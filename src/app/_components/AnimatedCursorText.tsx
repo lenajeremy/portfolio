@@ -5,7 +5,6 @@ import styles from './modules/animatedcursor.module.scss'
 
 type AnimatedCursorTextProps = {
   texts: string[]
-  initialTextIndex?: number
   as: keyof HTMLElementTagNameMap
 }
 

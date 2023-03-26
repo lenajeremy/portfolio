@@ -1,10 +1,13 @@
 import * as React from 'react'
 import styles from './page.module.scss'
 import { AnimatedCursorText } from '@/components/index'
+import Link from 'next/link'
+import client from './sanity-client'
 
-export default function Home() {
+export default async function Home() {
+
   return (
-    <div className = {styles.pageContainer}>
+    <div className={styles.pageContainer}>
       <div className={styles.headingContainer}>
         <div>
           <h1 className={styles.heading}>Designing highly</h1>
@@ -23,8 +26,16 @@ export default function Home() {
           online.
         </p>
 
-        <div>
-          
+        <div className={styles.ctaContainer}>
+          <Link
+            href="/about"
+            className={`foreground ${styles.cta} ${styles.ctaAbout}`}
+          >
+            About
+          </Link>
+          <button className={`foreground ${styles.cta} ${styles.ctaEmail}`}>
+            E-mail
+          </button>
         </div>
 
         <p>
