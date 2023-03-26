@@ -1,12 +1,18 @@
-import React from 'react';
+import Link from 'next/link'
+import React from 'react'
 import styles from './modules/sidebar.module.scss'
 
-
-export default function Footer () {
-    return (
-        <footer className = {styles.footer}>
-            <div className = 'foreground'>This is the footer</div>
-            <div className='foreground'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae nobis delectus ea libero vero odit quasi doloribus optio aspernatur, dolorum consectetur veniam nam sapiente ut dolorem ipsa labore aperiam quis! Esse, iusto. Officiis aliquid suscipit doloremque quas exercitationem esse quod tempora labore. Non alias provident exercitationem maxime laudantium totam eum.</div>
-        </footer>
-    )
+export default function Footer() {
+  return (
+    <footer className={styles.footer}>
+      <div>Built with ❤️ by Jeremiah Lena</div>
+      <div>
+        <Link href="/projects">Projects</Link>
+        <Link href="/blog">Writing</Link>
+        <Link href="/tools">Stack</Link>
+        <Link href="/about">About</Link>
+        <Link href="/contact">Contact</Link>
+      </div>
+    </footer>
+  )
 }

@@ -5,7 +5,6 @@ import Link from 'next/link'
 import client from './sanity-client'
 
 export default async function Home() {
-
   return (
     <div className={styles.pageContainer}>
       <div className={styles.headingContainer}>
@@ -47,6 +46,26 @@ export default async function Home() {
           self-improvement. I’m from Switzerland and based near Zurich, talking
           German and English natively. But for someone with roots in Chicago,
           Illinois, it is typical that I like to speak French. Don&apos;t I?
+        </p>
+
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
+          consequatur reiciendis. Qui eius voluptates cumque debitis aspernatur
+          vitae, eum temporibus ducimus voluptatem? Quisquam alias vitae quia
+          dolores necessitatibus magnam nam!
+        </p>
+
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro debitis
+          expedita tempora, officiis incidunt maiores autem necessitatibus
+          eveniet eligendi, facilis est excepturi deserunt? Quisquam tempora
+          obcaecati corrupti dolore magnam quod nemo error minus dolorem natus
+          aut maxime, fugiat facere eum. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Cum officia laboriosam, aut non ab corporis dolores
+          deleniti perferendis deserunt magnam dolor quae porro ad magni,
+          assumenda excepturi odio expedita optio ipsam amet rem repellendus.
+          Hic molestias dolorum, mollitia aut rem laudantium, explicabo quo
+          animi, nisi expedita rerum recusandae! Obcaecati, sed.
         </p>
       </div>
     </div>

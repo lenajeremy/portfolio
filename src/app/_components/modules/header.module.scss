@@ -1,0 +1,55 @@
+.header {
+  position: relative;
+  padding: 20px;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  background-color: rgb(var(--sidebar-background-rgb));
+  height: auto;
+  z-index: 90;
+
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    width: 100%;
+    background-color: rgb(var(--border-color-rgb));
+    z-index: 1;
+  }
+
+  .toggleSidebarButton {
+    width: 36px;
+    height: 36px;
+    background-color: rgb(43, 43, 43);
+    border: 1px solid rgb(var(--border-color-rgb));
+    border-radius: 6px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3px;
+
+    div {
+      width: 16px;
+      height: 2px;
+      border-radius: 20px;
+      background-color: rgb(var(--text-color-rgb));
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    & {
+      display: flex;
+    }
+  }
+}

@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import * as React from 'react'
 import client from '../sanity-client'
+import styles from './blog.module.scss'
 
 export default async function BlogHome() {
   const res = await client.fetch(`
@@ -21,7 +22,7 @@ export default async function BlogHome() {
     `)
 
   return (
-    <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 20 }}>
+    <div className = {styles.blogPage}>
       <h1>Blog</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
@@ -29,9 +30,7 @@ export default async function BlogHome() {
         perspiciatis at soluta non atque necessitatibus est numquam recusandae
         alias, sequi adipisci itaque!
       </p>
-      <div
-        style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '36px' }}
-      >
+      <div className = {styles.articlesContainer}>
         {res.map((article: ArticleProps) => {
           return <ArticleComponent {...article} key={article.title} />
         })}
@@ -54,7 +53,7 @@ function ArticleComponent(props: ArticleProps) {
       <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '12px' }}>
         <Image
           src={props.image.url}
-          width={400}
+          width={300}
           height={200}
           alt={props.title + 'Image'}
           placeholder="blur"

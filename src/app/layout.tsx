@@ -1,6 +1,6 @@
 import { Inter } from 'next/font/google'
 import './globals.scss'
-import { Sidebar, Footer } from '@/components/index'
+import { Sidebar, Footer, Header } from '@/components/index'
 
 export const metadata = {
   title: "Don't Create Next App",
@@ -29,6 +29,7 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <Header />
         <Sidebar />
         <main className="mainContainer">
           <div id="mainContent">{children}</div>

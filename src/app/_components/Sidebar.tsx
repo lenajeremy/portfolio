@@ -4,6 +4,7 @@ import styles from './modules/sidebar.module.scss'
 import NavLink from './NavLink'
 
 function Sidebar() {
+
   return (
     <aside className={styles.sidebarContainer}>
       <div className={styles.heading}>
