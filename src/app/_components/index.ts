@@ -3,3 +3,4 @@ export { default as NavLink } from './NavLink';
 export { default as AnimatedCursorText } from './AnimatedCursorText'
 export { default as Footer } from './Footer'
 export { default as Header } from './Header'
+export { default as MDXRenderer } from './MDXRenderer'
