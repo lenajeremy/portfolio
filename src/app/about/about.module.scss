@@ -1,0 +1,22 @@
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  .heading {
+    display: inherit;
+    flex-direction: inherit;
+    gap: 16px;
+
+    p {
+      font-size: 16px;
+    }
+  }
+
+  .aboutContent {
+    gap: 24px;
+    display: inherit;
+    flex-direction: inherit;
+    width: 560px;
+  }
+}

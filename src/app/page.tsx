@@ -1,13 +1,13 @@
 import * as React from 'react'
 import styles from './page.module.scss'
-import { AnimatedCursorText } from '@/components/index'
+import { AboutAndEmailButtonGroup, AnimatedCursorText } from '@/components/index'
 import Link from 'next/link'
 import client from './sanity-client'
 
 export default async function Home() {
   return (
     <div className={styles.pageContainer}>
-      <div className={styles.headingContainer}>
+      <div className={`${styles.headingContainer}`}>
         <div>
           <h1 className={styles.heading}>Designing highly</h1>
           <h1 className={styles.heading}>
@@ -25,19 +25,9 @@ export default async function Home() {
           online.
         </p>
 
-        <div className={styles.ctaContainer}>
-          <Link
-            href="/about"
-            className={`foreground ${styles.cta} ${styles.ctaAbout}`}
-          >
-            About
-          </Link>
-          <button className={`foreground ${styles.cta} ${styles.ctaEmail}`}>
-            E-mail
-          </button>
-        </div>
+        <AboutAndEmailButtonGroup />
 
-        <p>
+        <p className='w-560'>
           I&apos;m a Swiss digital product designer. I love grids, simplicity &
           good coffee. Apart being a practising minimalist and simple design
           addict, I’m also deeply into NoCode technologies and a truly
@@ -48,14 +38,14 @@ export default async function Home() {
           Illinois, it is typical that I like to speak French. Don&apos;t I?
         </p>
 
-        <p>
+        <p className='w-560'>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
           consequatur reiciendis. Qui eius voluptates cumque debitis aspernatur
           vitae, eum temporibus ducimus voluptatem? Quisquam alias vitae quia
           dolores necessitatibus magnam nam!
         </p>
 
-        <p>
+        <p className='w-560'>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro debitis
           expedita tempora, officiis incidunt maiores autem necessitatibus
           eveniet eligendi, facilis est excepturi deserunt? Quisquam tempora

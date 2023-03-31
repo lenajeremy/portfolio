@@ -1,0 +1,27 @@
+.ctaContainer {
+    display: flex;
+    gap: 16px;
+  
+    .cta {
+      padding: 12px 24px;
+      border: 1px solid rgb(var(--border-color-rgb));
+      border-radius: 6px;
+      transition: border-color 400ms ease-in-out;
+      font-weight: 500;
+      line-height: 1;
+  
+      &:hover {
+        --border-color-rgb: 51, 51, 51;
+      }
+    }
+  
+    .ctaAbout {
+      background-color: rgb(var(--sidebar-background-rgb));
+    }
+  
+    .ctaEmail {
+      background-color: transparent;
+      cursor: pointer;
+    }
+  }
+  
