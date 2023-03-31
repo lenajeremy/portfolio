@@ -14,10 +14,11 @@ function AnimatedCursorText({ texts, as }: AnimatedCursorTextProps) {
 
   const animatedText = React.useRef<HTMLDivElement>(null)
   let deletionInterval: NodeJS.Timeout;
-  let incrementInterval;
 
   React.useEffect(() => {
     setupAnimation()
+    
+    // eslint-disable-next-line 
   }, [])
 
   React.useEffect(() => {

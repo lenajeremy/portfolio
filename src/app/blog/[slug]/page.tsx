@@ -30,15 +30,11 @@ export default async function ArticlePage(props: PageProps) {
     }[0]
     `)
 
-  if (article.length === 0) {
-    console.log(article)
-
+  if (!article) {
     notFound()
   }
 
   const mdxSource = await serialize(article.content)
-
-  console.log(mdxSource)
 
   return (
     <div>
