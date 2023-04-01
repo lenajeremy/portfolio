@@ -1,10 +1,10 @@
 import React from 'react'
 import client from '@/app/sanity-client'
 import { notFound } from 'next/navigation'
-import Image from 'next/image'
 import { serialize } from 'next-mdx-remote/serialize'
-import { Codeblock, MDXRenderer } from '@/app/_components'
-import CounterButton from '@/app/_components/CounterButton'
+import { MDXRenderer } from '@/app/_components'
+import ImageClient from '@/app/_components/ImageClient'
+import styles from './blogpage.module.scss'
 
 type PageProps = {
   params: {
@@ -37,18 +37,25 @@ export default async function ArticlePage(props: PageProps) {
   const mdxSource = await serialize(article.content)
 
   return (
-    <div>
+    <div className = {styles.pageContainer}>
       <h1 className="foreground">{article.title}</h1>
-      <Image
+      <ImageClient
         width={650}
-        height={400}
+        height={350}
         src={article.image.url}
         blurDataURL={article.image.blurred}
         placeholder="blur"
         loading="eager"
         alt={`Cover picture for ${article.title}`}
+        style={{ maxHeight: 500 }}
       />
-      <MDXRenderer {...mdxSource} />
+      <MDXRenderer
+        {...mdxSource}
+        components={{
+          img: ImageClient,
+          h1: 'h2',
+        }}
+      />
     </div>
   )
 }

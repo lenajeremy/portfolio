@@ -7,15 +7,13 @@
 
   font-family: Inter, sans-serif;
 
-  --font-mono: "Fira Code", monospace;
+  --font-mono: 'Fira Code', monospace;
 
   --background-rgb: 22, 22, 22;
   --foreground-rgb: 242, 242, 242;
   --sidebar-background-rgb: 28, 28, 28;
   --border-color-rgb: 40, 40, 40;
   --text-color-rgb: 124, 127, 130;
-
-  
 
   --breakpoint-tab: 1024px;
 }
@@ -63,7 +61,7 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   font-size: var(--default-font-size);
-  color: rgb(var(--text-color-rgb)); 
+  color: rgb(var(--text-color-rgb));
   background: rgb(var(--background-rgb));
   min-height: 100vh;
 }
@@ -75,13 +73,16 @@ hr {
 main.mainContainer {
   margin-left: var(--sidebar-width);
   padding-top: 120px;
-  
+
   #mainContent {
-    margin: auto;    
+    margin: auto;
     width: var(--main-container-width);
     padding: 0 36px;
 
-    p {
+    p,
+    a,
+    li,
+    ul {
       line-height: 1.8rem;
     }
   }
@@ -121,10 +122,83 @@ h1 {
   }
 }
 
+// h2 {
+//   font-size: 40px;
+//   font-weight: 600;
+//   color: rgb(var(--foreground-rgb));
+//   line-height: 48px;
+//   letter-spacing: -2px;
+
+//   @media screen and (max-width: 768px) {
+//     & {
+//       font-size: 36px;
+//       line-height: 40px;
+//     }
+//   }
+// }
+
+h2 {
+  font-size: 36px;
+  font-weight: 600;
+  color: rgb(var(--foreground-rgb));
+  line-height: 40px;
+  letter-spacing: -2px;
+
+  @media screen and (max-width: 768px) {
+    & {
+      font-size: 30px;
+      line-height: 40px;
+    }
+  }
+}
+
+
+h3 {
+  font-size: 30px;
+  font-weight: 600;
+  color: rgb(var(--foreground-rgb));
+  line-height: 36px;
+
+  @media screen and (max-width: 768px) {
+    & {
+      font-size: 28px;
+      line-height: 30px;
+    }
+  }
+}
+
+
+h4 {
+  font-size: 24px;
+  font-weight: 500;
+  color: rgb(var(--foreground-rgb));
+  line-height: 30px;
+
+  @media screen and (max-width: 768px) {
+    & {
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+}
+
+
+h5 {
+  font-size: 18px;
+  font-weight: 500;
+  // color: rgb(var(--foreground-rgb));
+  line-height: 24px;
+
+}
+
 code {
   font-family: var(--font-mono) !important;
 }
 
 .w-560 {
   width: 560px;
+
+  @media screen and (max-width: 1023px) {
+    width: 100%;
+  }
 }

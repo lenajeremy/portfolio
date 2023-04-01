@@ -10,7 +10,7 @@ export default function AboutPage() {
         <p className="foreground">European aesthetics with American spirit.</p>
       </div>
 
-      <div className={styles.aboutContent}>
+      <div className={`w-560 ${styles.aboutContent}`}>
         <p>
           I&apos;m a Swiss digital product designer. I love grids, simplicity &
           good coffee. Apart being a practising minimalist and simple design

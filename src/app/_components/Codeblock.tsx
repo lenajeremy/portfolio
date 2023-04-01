@@ -21,10 +21,9 @@ export default function Codeblock({
               : 'jsx'
           }
           showLineNumbers={true}
-          wrapLines={false}
+          wrapLines={true}
           theme={androidstudio}
         />
-        <pre>{JSON.stringify(otherProps)}</pre>
       </div>
     )
   } else {

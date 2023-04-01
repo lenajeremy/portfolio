@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "type-check": "tsc",
+    "update-repo": "tsc && git push"
   },
   "dependencies": {
     "@types/node": "18.15.5",

@@ -24,7 +24,7 @@ export default async function BlogHome() {
   return (
     <div className={styles.blogPage}>
       <h1>Blog</h1>
-      <p className='foreground'>Sometimes I also write useful things.</p>
+      <p className="foreground">Sometimes I also write useful things.</p>
       <div className={styles.articlesContainer}>
         {res.map((article: ArticleProps) => {
           return <ArticleComponent {...article} key={article.title} />
@@ -61,7 +61,9 @@ function ArticleComponent(props: ArticleProps) {
           }}
         />
         <div>
-          <h3 className="foreground">{props.title}</h3>
+          <h5 style={{ fontWeight: '600' }} className="foreground">
+            {props.title}
+          </h5>
           <p>{new Date(props.createdAt).toDateString()}</p>
         </div>
         {/* <div style={{ display: 'flex', gap: '8px',, width: '100%' }}>

@@ -4,7 +4,12 @@ const nextConfig = {
     appDir: true,
   },
   images: {
-    domains: ['cdn.sanity.io'],
+    domains: [
+      'cdn.sanity.io',
+      'dev-to-uploads.s3.amazonaws.com',
+      'cdn.hashnode.com',
+      'media.makeameme.org',
+    ],
   },
 }
 
