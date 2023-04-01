@@ -52,6 +52,7 @@ export default async function ArticlePage(props: PageProps) {
       <MDXRenderer
         {...mdxSource}
         components={{
+          // @ts-ignore
           img: ImageClient,
           h1: 'h2',
         }}
