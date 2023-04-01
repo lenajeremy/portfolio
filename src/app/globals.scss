@@ -4,50 +4,26 @@
   --default-font-size: 14px;
   --sidebar-width: 256px;
   --main-container-width: 768px;
+  --breakpoint-tab: 1024px;
 
   font-family: Inter, sans-serif;
 
   --font-mono: 'Fira Code', monospace;
 
-  --background-rgb: 22, 22, 22;
-  --foreground-rgb: 242, 242, 242;
-  --sidebar-background-rgb: 28, 28, 28;
-  --border-color-rgb: 40, 40, 40;
-  --text-color-rgb: 124, 127, 130;
-
-  --breakpoint-tab: 1024px;
+  --background-rgb: 242, 242, 242;
+  --foreground-rgb: 22, 22, 22;
+  --sidebar-background-rgb: 245, 245, 245;
+  --border-color-rgb: 238, 238, 238;
+  --text-color-rgb: 125, 127, 131;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.3)
-    );
-
-    --tile-start-rgb: 2, 13, 46;
-    --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(
-      #ffffff80,
-      #ffffff40,
-      #ffffff30,
-      #ffffff20,
-      #ffffff10,
-      #ffffff10,
-      #ffffff80
-    );
-
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
+    --background-rgb: 22, 22, 22;
+    --foreground-rgb: 242, 242, 242;
+    --sidebar-background-rgb: 28, 28, 28;
+    --border-color-rgb: 40, 40, 40;
+    --text-color-rgb: 124, 127, 130;
   }
 }
 
@@ -152,7 +128,6 @@ h2 {
   }
 }
 
-
 h3 {
   font-size: 30px;
   font-weight: 600;
@@ -166,7 +141,6 @@ h3 {
     }
   }
 }
-
 
 h4 {
   font-size: 24px;
@@ -182,13 +156,11 @@ h4 {
   }
 }
 
-
 h5 {
   font-size: 18px;
   font-weight: 500;
   // color: rgb(var(--foreground-rgb));
   line-height: 24px;
-
 }
 
 code {

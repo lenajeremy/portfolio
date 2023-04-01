@@ -13,7 +13,7 @@ function ImageClient(props: React.ComponentProps<typeof Image>) {
         objectFit: 'cover',
         objectPosition: 'top left',
         border: '1px solid rgb(var(--border-color-rgb))',
-        margin: '20px 0px',
+        margin: '10px 0px',
         width: '100%',
         height: '100%',
         ...props.style,

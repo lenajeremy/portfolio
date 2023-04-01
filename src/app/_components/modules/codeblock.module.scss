@@ -13,4 +13,9 @@
   background-color: #282b2e;
   padding: 3px 6px;
   border-radius: 3px;
+
+  @media screen and (prefers-color-scheme: light) {
+    background-color: #c6c6c6;
+    color: black;
+  }
 }

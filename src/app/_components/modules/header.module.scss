@@ -28,10 +28,13 @@
   .toggleSidebarButton {
     width: 36px;
     height: 36px;
-    background-color: rgb(43, 43, 43);
     border: 1px solid rgb(var(--border-color-rgb));
     border-radius: 6px;
     cursor: pointer;
+
+    @media screen and (prefers-color-scheme: dark) {
+      background-color: rgb(43, 43, 43);
+    }
 
     display: flex;
     align-items: center;

@@ -1,7 +1,13 @@
 .navLink {
-  --active-bg-rgb: 43, 43, 43;
+
+  --active-bg-rgb: 242, 242, 242;
   --active-border-rgb: 57, 57, 57;
   --border-opacity: 0;
+
+  @media screen and (prefers-color-scheme: dark) {
+    --active-bg-rgb: 43, 43, 43;
+    --border-opacity: 0;
+  }
 
   padding: 8px 12px;
   line-height: 20px;

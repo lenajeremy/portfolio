@@ -37,7 +37,7 @@ export default async function ArticlePage(props: PageProps) {
   const mdxSource = await serialize(article.content)
 
   return (
-    <div className = {styles.pageContainer}>
+    <div className={styles.pageContainer}>
       <h1 className="foreground">{article.title}</h1>
       <ImageClient
         width={650}
@@ -47,7 +47,7 @@ export default async function ArticlePage(props: PageProps) {
         placeholder="blur"
         loading="eager"
         alt={`Cover picture for ${article.title}`}
-        style={{ maxHeight: 500 }}
+        style={{ maxHeight: 350, height: 'false' }}
       />
       <MDXRenderer
         {...mdxSource}
