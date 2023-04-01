@@ -1,0 +1,16 @@
+.codeBlock {
+  margin: 20px 0px;
+
+  code {
+    &:first-of-type {
+      padding-left: 10px;
+    }
+  }
+}
+
+.inlineCode {
+  font-family: var(--font-mono);
+  background-color: #282b2e;
+  padding: 3px 6px;
+  border-radius: 3px;
+}

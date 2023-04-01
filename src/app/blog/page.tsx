@@ -22,15 +22,10 @@ export default async function BlogHome() {
     `)
 
   return (
-    <div className = {styles.blogPage}>
+    <div className={styles.blogPage}>
       <h1>Blog</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
-        expedita magni aut optio delectus quibusdam reprehenderit perferendis
-        perspiciatis at soluta non atque necessitatibus est numquam recusandae
-        alias, sequi adipisci itaque!
-      </p>
-      <div className = {styles.articlesContainer}>
+      <p className='foreground'>Sometimes I also write useful things.</p>
+      <div className={styles.articlesContainer}>
         {res.map((article: ArticleProps) => {
           return <ArticleComponent {...article} key={article.title} />
         })}
@@ -50,7 +45,7 @@ type ArticleProps = {
 function ArticleComponent(props: ArticleProps) {
   return (
     <Link href={'/blog/' + props.slug}>
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '12px' }}>
+      <div className={styles.article}>
         <Image
           src={props.image.url}
           width={300}
@@ -65,12 +60,15 @@ function ArticleComponent(props: ArticleProps) {
             width: '100%',
           }}
         />
-        <h2 className="foreground" style = {{ fontSize: 20 }}>{props.title}</h2>
-        <div style={{ display: 'flex', gap: '8px', marginTop: '-8px' }}>
+        <div>
+          <h3 className="foreground">{props.title}</h3>
+          <p>{new Date(props.createdAt).toDateString()}</p>
+        </div>
+        {/* <div style={{ display: 'flex', gap: '8px',, width: '100%' }}>
           {props.tags.map((t) => (
             <p key={t.tagName}>#{t.tagName}</p>
           ))}
-        </div>
+        </div> */}
       </div>
     </Link>
   )

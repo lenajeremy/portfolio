@@ -1,3 +1,5 @@
+'use client'
+
 import * as React from 'react'
 import Image from 'next/image'
 import styles from './modules/sidebar.module.scss'
@@ -12,10 +14,11 @@ function Sidebar() {
         <Link href="/about">
           <div>
             <p className={`foreground`}>Jeremiah Lena</p>
-            <div className = {styles.positionsContainer}>
-              <p>Frontend Engineer</p>
-              <p>Digital Marketer</p>
-              <p>Visual Design Enthusiast</p>
+            <div className={styles.positionsContainer}>
+              <div>
+                <p>Frontend Engineer</p>
+                <p>Mobile Engineer</p>
+              </div>
             </div>
           </div>
         </Link>

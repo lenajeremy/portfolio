@@ -3,7 +3,7 @@ import client from '@/app/sanity-client'
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
 import { serialize } from 'next-mdx-remote/serialize'
-import { MDXRenderer } from '@/app/_components'
+import { Codeblock, MDXRenderer } from '@/app/_components'
 import CounterButton from '@/app/_components/CounterButton'
 
 type PageProps = {
@@ -48,7 +48,7 @@ export default async function ArticlePage(props: PageProps) {
         loading="eager"
         alt={`Cover picture for ${article.title}`}
       />
-      <MDXRenderer {...mdxSource} components={{ CounterButton: CounterButton  }} />
+      <MDXRenderer {...mdxSource} />
     </div>
   )
 }
