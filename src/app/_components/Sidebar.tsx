@@ -285,6 +285,8 @@ function Sidebar() {
             </NavLink>
           </nav>
         </div>
+
+        <div onClick={() => setOpen(false)} className={styles.sidebarOverlay} />
       </aside>
 
       <Header />
