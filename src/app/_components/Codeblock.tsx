@@ -1,7 +1,7 @@
 'use client'
 
 import { CopyBlock, androidstudio } from 'react-code-blocks'
-import styles from './modules/codeblock.module.scss'
+import styles from './modules/markdownstyles.module.scss'
 
 export default function Codeblock({
   children: text,

@@ -15,6 +15,7 @@
   --sidebar-background-rgb: 245, 245, 245;
   --border-color-rgb: 238, 238, 238;
   --text-color-rgb: 125, 127, 131;
+  --accent-color-rgb: 255, 74, 1;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -60,6 +61,10 @@ main.mainContainer {
     li,
     ul {
       line-height: 1.8rem;
+    }
+
+    ul, ol {
+      list-style-position: inside;
     }
   }
 

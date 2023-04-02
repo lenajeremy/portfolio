@@ -19,3 +19,18 @@
     color: black;
   }
 }
+
+.blockQuoteContainer {
+  padding: 12px;
+  padding-left: 24px;
+  border-left: 4px solid rgb(var(--accent-color-rgb));
+  background-color: rgba(var(--accent-color-rgb), 3%);
+  margin: 1rem 0;
+  font-style: italic;
+
+  p {
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+}
