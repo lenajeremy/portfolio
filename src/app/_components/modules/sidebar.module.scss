@@ -11,6 +11,7 @@
   flex-direction: column;
   gap: 40px;
   transition: transform 500ms ease-out;
+  z-index: 5;
 
   .heading {
     display: flex;
