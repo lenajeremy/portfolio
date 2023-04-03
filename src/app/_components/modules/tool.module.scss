@@ -1,0 +1,28 @@
+.tool {
+  padding: 12px;
+  display: flex;
+  gap: 16px;
+  border-radius: 6px;
+  background-color: transparent;
+  will-change: background-color;
+  transition: background-color 350ms ease-out;
+  cursor: pointer;
+
+  .textContainer {
+    width: calc(100% - 56px)
+  }
+
+  p {
+    line-height: 20px !important;
+
+    &:first-of-type {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+
+  &:hover {
+    background-color: rgb(var(--sidebar-background-rgb));
+  }
+}

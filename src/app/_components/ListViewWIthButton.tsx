@@ -1,4 +1,4 @@
-'use client'
+import Link from 'next/link'
 import React from 'react'
 import styles from './modules/listviewwithbutton.module.scss'
 
@@ -6,23 +6,29 @@ type ListViewWithButtonProps<T> = {
   heading: string
   subheading: string
   listItems: Array<T>
-  Component: () => JSX.Element
+  renderListItems: (item: T) => JSX.Element
   buttonLink: string
+  buttonTitle: string
 }
 
 export default function ListViewWithButton<T>(
   props: ListViewWithButtonProps<T>,
 ) {
-//   const Component = React.memo(props.renderComponent)
-
-//   console.log(Component)
-
   return (
     <div className={styles.listViewContainer}>
-      <h1>{props.heading}</h1>
-      {props.listItems.map((item, index) => {
-        return <props.Component key={index} />
-      })}
+      <div className={styles.heading}>
+        <h4>{props.heading}</h4>
+        <p>{props.subheading}</p>
+      </div>
+      <div className={styles.contentContainer}>
+        {props.listItems.map((item) => props.renderListItems(item))}
+      </div>
+
+      <div>
+        <Link id="button" href={props.buttonLink}>
+          {props.buttonTitle}
+        </Link>
+      </div>
     </div>
   )
 }

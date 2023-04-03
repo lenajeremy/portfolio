@@ -1,13 +1,10 @@
-import Image from 'next/image'
 import * as React from 'react'
+import { Tool } from '../_components'
 import styles from './tools.module.scss'
 
 export default function ToolsPage() {
-  const tools: Array<{
-    imageUrl: string
-    name: string
-    category: string
-  }> = [
+  
+  const tools: Array<React.ComponentProps<typeof Tool>> = [
     {
       name: 'Framer',
       category: 'Website Builder',
@@ -22,7 +19,7 @@ export default function ToolsPage() {
     },
     {
       name: 'Linear',
-      category: 'Project Management',
+      category: 'Project Manage ment',
       imageUrl:
         'https://framerusercontent.com/images/CQSyM2flIboH8syDCScLWEL7mgY.webp',
     },
@@ -58,22 +55,7 @@ export default function ToolsPage() {
       </p>
       <div className={styles.toolsGrid}>
         {tools.map((tool) => (
-          <div className={styles.tool} key={tool.name}>
-            <Image
-              src={tool.imageUrl}
-              width={40}
-              height={40}
-              alt={`Image for ${tool.name}`}
-              style={{
-                border: '1px solid rgb(var(--border-color-rgb))',
-                borderRadius: 6,
-              }}
-            />
-            <div>
-              <p className="foreground">{tool.name}</p>
-              <p>{tool.category}</p>
-            </div>
-          </div>
+          <Tool {...tool} key={tool.name} />
         ))}
       </div>
     </div>

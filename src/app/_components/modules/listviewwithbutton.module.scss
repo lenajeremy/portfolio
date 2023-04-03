@@ -1,5 +1,40 @@
 .listViewContainer {
   padding: 12px;
-  border-radius: 6;
+  border-radius: 6px;
   border: 1px solid rgb(var(--border-color-rgb));
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  .heading {
+    padding: 12px 12px 0 12px;
+    * {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+
+  .contentContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  a#button {
+    padding: 12px 24px;
+    background-color: rgb(var(--sidebar-background-rgb));
+    width: 100%;
+    display: block;
+    color: rgb(var(--foreground-rgb));
+    font-weight: 600;
+    text-align: center;
+    line-height: 16px;
+    border-radius: 6px;
+    border: 1px solid rgb(var(--border-color-rgb));
+    transition: border-color 350ms ease-out;
+    
+    &:hover {
+      border-color: rgb(var(--text-color-rgb))
+    };
+  }
 }
