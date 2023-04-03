@@ -25,7 +25,7 @@ export default function ListViewWithButton<T>(
       </div>
 
       <div>
-        <Link id="button" href={props.buttonLink}>
+        <Link className={styles.button} href={props.buttonLink}>
           {props.buttonTitle}
         </Link>
       </div>
