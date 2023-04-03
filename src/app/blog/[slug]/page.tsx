@@ -47,7 +47,12 @@ export default async function ArticlePage(props: PageProps) {
         placeholder="blur"
         loading="eager"
         alt={`Cover picture for ${article.title}`}
-        style={{ maxHeight: 350, height: 'false', borderRadius: 6 }}
+        style={{
+          maxHeight: 350,
+          height: 'false',
+          borderRadius: 6,
+          marginTop: '3rem',
+        }}
       />
       <MDXRenderer
         {...mdxSource}

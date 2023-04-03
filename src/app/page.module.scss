@@ -14,6 +14,9 @@
 
 .pageContainer {
   padding: 0 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
 
   @media screen and (max-width: 768px) {
     padding: 0px;
@@ -34,4 +37,10 @@
     width: 95%;
     font-size: 15px;
   }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
