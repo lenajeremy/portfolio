@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { AboutAndEmailButtonGroup, LoadingAnimation, ContactForm } from '../_components'
+import { AboutAndEmailButtonGroup, ContactForm } from '../_components'
 import styles from './contactpage.module.scss'
 
 
@@ -19,7 +19,6 @@ export default function ContactPage() {
 
       <div className={styles.contactSection}>
         <h4>Send us a message</h4>
-        <LoadingAnimation />
         <ContactForm />
       </div>
     </div>
