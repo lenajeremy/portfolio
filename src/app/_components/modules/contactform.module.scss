@@ -1,0 +1,29 @@
+.contactForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+
+  .input, .textarea {
+    background-color: rgb(var(--sidebar-background-rgb));
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 16px;
+    color: rgb(var(--foreground-rgb));
+    font-size: inherit;
+    font-family: inherit;
+
+    ::placeholder {
+        color: rgb(var(--text-color-rgb));
+    }
+  }
+
+  .input {
+    grid-column: 1;
+    line-height: 1.4em;
+  }
+
+  .textarea {
+    grid-column: 2;
+  }
+}

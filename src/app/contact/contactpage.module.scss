@@ -1,0 +1,27 @@
+.contactPage {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        > .foreground {
+            font-size: 16px;
+            width: 80%;
+        }
+    }
+
+    h4 {
+        font-size: 20px;
+        letter-spacing: -0.4px;
+    }
+
+    .contactSection {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+}

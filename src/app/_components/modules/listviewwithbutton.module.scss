@@ -28,7 +28,7 @@
     color: rgb(var(--foreground-rgb));
     font-weight: 600;
     text-align: center;
-    line-height: 16px;
+    line-height: 16px!important;
     border-radius: 6px;
     border: 1px solid rgb(var(--border-color-rgb));
     transition: border-color 350ms ease-out;
