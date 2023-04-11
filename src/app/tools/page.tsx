@@ -46,6 +46,11 @@ export default function ToolsPage() {
       category: 'Programming Language',
       imageUrl: '/typescript.png',
     },
+    {
+      name: 'React',
+      category: 'Coding',
+      imageUrl: '/react.png'
+    }
   ]
   return (
     <div className={styles.toolsPage}>
