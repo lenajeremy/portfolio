@@ -1,5 +1,46 @@
 .pageContainer {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 64px;
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    p {
+      font-size: 16px;
+    }
+  }
+
+  .projectsGrid {
+    display: grid;
+    gap: 24px;
+
+    .project {
+      display: flex;
+      gap: 24px;
+      width: 100%;
+      padding: 12px;
+      border-radius: 6px;
+      background-color: transparent;
+      transition: 350ms ease-in;
+
+      img {
+        border-radius: 6px;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      &:hover{
+        background-color: rgb(var(--sidebar-background-rgb));
+      }
+
+      .projectDetails {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+    }
+  }
 }

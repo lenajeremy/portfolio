@@ -1,25 +1,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import * as React from 'react'
-import client from '../sanity-client'
+import { fetchBlog } from '../_api'
 import styles from './blog.module.scss'
 
 export default async function BlogHome() {
-  const res = await client.fetch(`
-    *[_type == 'article']|order(_createdAt desc){
-      title,
-      "image": *[_id == ^.coverImage.asset._ref][0]{
-        "blurred": metadata.lqip,
-          url,
-      },
-      "slug": slug.current,
-      "createdAt": _createdAt,
-      "tags": tags[]{
-        "id": _ref,
-        "tagName": *[_type == 'tag' && _id == ^._ref][0].name
-      }
-      }  
-    `)
+  const res = await fetchBlog()
 
   return (
     <div className={styles.blogPage}>
