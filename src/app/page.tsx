@@ -43,9 +43,10 @@ export default async function Home() {
     <div className={styles.pageContainer}>
       <div className={`${styles.headingContainer}`}>
         <div>
-          <h1 className={styles.heading}>Designing highly</h1>
+          <h1 className={styles.heading}>Hey! I&apos;m Jeremiah</h1>
           <h1 className={styles.heading}>
-            polished{' '}
+            {' '}
+            I develop{' '}
             <AnimatedCursorText
               texts={['software.', 'apps.', 'websites.']}
               as="span"
@@ -54,19 +55,19 @@ export default async function Home() {
         </div>
 
         <p className={`foreground ${styles.developerDescription}`}>
-          Product designer obsessed with (no)code. Creating aesthetic & timeless
-          digital products & helpful tools that give you an unfair advantage
-          online.
+          Frontend engineer who creates solutions by using the
+          latest technologies to develop easy-to-use, visually appealing and engaging
+          websites.
         </p>
 
         <AboutAndEmailButtonGroup />
       </div>
 
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
-        consequatur reiciendis. Qui eius voluptates cumque debitis aspernatur
-        vitae, eum temporibus ducimus voluptatem? Quisquam alias vitae quia
-        dolores necessitatibus magnam nam!
+        I love working at the intersection of design and technology, where I get
+        to take a designer&apos;s vision and turn it into a dynamic and interactive
+        website or app. As a frontend engineer, I get to flex my creative
+        muscles while also problem-solving to create engaging user experiences.
       </p>
 
       <ListView

@@ -6,10 +6,11 @@
   .heading {
     display: inherit;
     flex-direction: inherit;
-    gap: 16px;
+    gap: 16px; 
 
-    p {
-      font-size: 16px;
+    .quote {
+      font-style: italic;
+      max-width: 560px;
     }
   }
 

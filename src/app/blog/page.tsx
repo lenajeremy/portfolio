@@ -10,7 +10,7 @@ export default async function BlogHome() {
   return (
     <div className={styles.blogPage}>
       <h1>Blog</h1>
-      <p className="foreground">Sometimes I also write useful things.</p>
+      <p className="foreground">Sometimes I also write about tech, programming and life.</p>
       <div className={styles.articlesContainer}>
         {res.map((article: ArticleProps) => {
           return <ArticleComponent {...article} key={article.title} />
