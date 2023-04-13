@@ -20,7 +20,7 @@ export async function fetchBlog() {
 
 export async function fetchProjects() {
     return await client.fetch(`
-    *[_type == 'project']|order(_createdAt desc) {
+    *[_type == 'project' && public == true]|order(_updatedAt desc) {
         "id": _id,
         name,
         description,

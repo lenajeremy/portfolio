@@ -24,7 +24,7 @@ const BlogListItem = Tool
 
 export default async function Home() {
   const res: Array<BlogItemType> = await client.fetch(`
-    *[_type == 'article']|order(_createdAt desc){
+    *[_type == 'article']|order(_updatedAt desc){
       title,
       "image": *[_id == ^.coverImage.asset._ref][0]{
         "blurred": metadata.lqip,
