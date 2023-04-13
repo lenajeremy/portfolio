@@ -6,8 +6,6 @@ import styles from './projects.module.scss'
 export default async function ProjectsPage() {
   const res = await fetchProjects()
 
-  console.log(res)
-
   return (
     <div className={styles.pageContainer}>
       <div className={styles.header}>
@@ -23,8 +21,8 @@ export default async function ProjectsPage() {
               placeholder="blur"
               blurDataURL={project.coverImage.blurred}
               alt={project.name}
-              width={200}
-              height={150}
+              width={500}
+              height={375}
             />
             <div>
               <div className={styles.projectDetails}>

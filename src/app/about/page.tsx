@@ -14,7 +14,7 @@ export default async function AboutPage() {
     'hope',
     'humor',
     'imagination',
-    'love'
+    'love',
   ]
 
   const promise = await fetch(
@@ -30,26 +30,30 @@ export default async function AboutPage() {
     <div className={styles.pageContainer}>
       <div className={styles.heading}>
         <h1>About Jeremiah</h1>
-        <p className={styles.quote}>{quote[0].quote} ({quote[0].author})</p>
+        <p className={styles.quote}>
+          {quote[0].quote} ({quote[0].author})
+        </p>
       </div>
 
       <div className={`w-560 ${styles.aboutContent}`}>
         <p>
-          I&apos;m a frontend engineer based in Lagos, Nigeria. I love microinteraction and sometimes obsess over them. 
-          Apart being a practising minimalist and simple design
-          addict, I’m also deeply into NoCode technologies and a truly
-          typography enthusiast. As an autodidactic developer, I’m sensitive
-          about important technical aspects and always seeking for
-          self-improvement. I’m from Switzerland and based near Zurich, talking
-          German and English natively. But for someone with roots in Chicago,
-          Illinois, it is typical that I like to speak French. Don&apos;t I?
+          I&apos;m a frontend engineer based in Lagos, Nigeria. I love
+          microinteraction and sometimes obsess over them.
+        </p>
+        <p>
+          As a frontend engineer with a passion for designing interactive
+          websites, I strive to create digital experiences that are both
+          visually appealing and user-friendly. I pay close attention to detail
+          and pour my heart into every project to ensure that the end product is
+          not only aesthetically pleasing but also functional and intuitive to
+          use.
         </p>
 
         <p>
-          Design is at the heart of how I build an emotional connection between
-          your brand and your customers. Through my background in human computer
-          interaction design and requirements engineering, I know exactly how to
-          design your digital product to deliver great value for your business.
+          My background in user interface design and web development allows me
+          to approach projects from both a design and technical perspective,
+          ensuring that the website not only looks great but also functions
+          flawlessly.
         </p>
 
         <p>

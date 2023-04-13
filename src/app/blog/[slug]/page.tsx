@@ -52,6 +52,7 @@ export default async function ArticlePage(props: PageProps) {
           height: 'false',
           borderRadius: 6,
           marginTop: '3rem',
+          marginBottom: '2rem'
         }}
       />
       <MDXRenderer

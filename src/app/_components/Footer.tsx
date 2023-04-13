@@ -7,11 +7,14 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div>Built with ❤️ by Jeremiah Lena</div>
       <div>
-        <Link href="/projects">Projects</Link>
-        <Link href="/blog">Writing</Link>
-        <Link href="/tools">Stack</Link>
-        <Link href="/about">About</Link>
-        <Link href="/contact">Contact</Link>
+        Inspired by{' '}
+        <a
+          href="https://cedric.design"
+          referrerPolicy="no-referrer"
+          target={'_blank'}
+        >
+          Cédric Moore
+        </a>
       </div>
     </footer>
   )

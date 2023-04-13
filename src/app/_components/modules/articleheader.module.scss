@@ -15,6 +15,10 @@
   z-index: 9;
   backdrop-filter: blur(4px);
 
+  @media all and (prefers-color-scheme: light) {
+    background-color: #f1f1f1ad;
+  }
+
   > div {
     width: var(--main-container-width);
     display: flex;

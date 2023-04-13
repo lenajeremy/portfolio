@@ -55,19 +55,20 @@ export default async function Home() {
         </div>
 
         <p className={`foreground ${styles.developerDescription}`}>
-          Frontend engineer who creates solutions by using the
-          latest technologies to develop easy-to-use, visually appealing and engaging
+          Frontend engineer who creates solutions by using the latest
+          technologies to develop easy-to-use, visually appealing and engaging
           websites.
         </p>
 
         <AboutAndEmailButtonGroup />
       </div>
 
-      <p>
+      <p className = 'w-560'>
         I love working at the intersection of design and technology, where I get
-        to take a designer&apos;s vision and turn it into a dynamic and interactive
-        website or app. As a frontend engineer, I get to flex my creative
-        muscles while also problem-solving to create engaging user experiences.
+        to take a designer&apos;s vision and turn it into a dynamic and
+        interactive website or app. As a frontend engineer, I get to flex my
+        creative muscles while also problem-solving to create engaging user
+        experiences.
       </p>
 
       <ListView
@@ -93,21 +94,19 @@ export default async function Home() {
         subheading="Software and tools I use regularly."
         listItems={[
           {
-            name: 'Figma',
-            category: 'Design Tool',
-            imageUrl:
-              'https://framerusercontent.com/images/u6LX1xbRWcF4uAfNGXgPuyJiM.webp',
-          },
-          {
-            name: 'Cron',
-            category: 'Calendar',
-            imageUrl:
-              'https://framerusercontent.com/images/X4iSnNDJiPdfGvKo6FvP8pdne8.webp',
-          },
-          {
             name: 'Typescript',
             category: 'Programming Language',
             imageUrl: '/typescript.png',
+          },
+          {
+            name: 'React',
+            category: 'Coding',
+            imageUrl: '/react.png',
+          },
+          {
+            name: 'NextJS',
+            category: 'Fullstack React Framework',
+            imageUrl: '/nextjs.png',
           },
         ]}
         renderListItems={(item) => <Tool {...item} />}
@@ -115,18 +114,32 @@ export default async function Home() {
         buttonTitle="All Tools"
       />
 
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro debitis
-        expedita tempora, officiis incidunt maiores autem necessitatibus eveniet
-        eligendi, facilis est excepturi deserunt? Quisquam tempora obcaecati
-        corrupti dolore magnam quod nemo error minus dolorem natus aut maxime,
-        fugiat facere eum. Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Cum officia laboriosam, aut non ab corporis dolores deleniti
-        perferendis deserunt magnam dolor quae porro ad magni, assumenda
-        excepturi odio expedita optio ipsam amet rem repellendus. Hic molestias
-        dolorum, mollitia aut rem laudantium, explicabo quo animi, nisi expedita
-        rerum recusandae! Obcaecati, sed.
-      </p>
+      <div className="w-560">
+        <p>
+          As a frontend engineer with a passion for designing interactive
+          websites, I strive to create digital experiences that are both
+          visually appealing and user-friendly. I pay close attention to detail
+          and pour my heart into every project to ensure that the end product is
+          not only aesthetically pleasing but also functional and intuitive to
+          use.
+        </p>
+
+        <br />
+
+        <p>
+          My background in user interface design and web development allows me
+          to approach projects from both a design and technical perspective,
+          ensuring that the website not only looks great but also functions
+          flawlessly.
+        </p>
+
+        <br />
+
+        <p>
+          I’m always looking to collaborate on interesting projects with great
+          people. Need a hand? I have two – Nice to meet you!
+        </p>
+      </div>
     </div>
   )
 }
