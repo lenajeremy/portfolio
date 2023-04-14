@@ -15,7 +15,6 @@ export default function ContactForm() {
   const [isSendingMail, setIsSendingMail] = React.useState<boolean>(false)
 
   const onSubmitSuccess = async (data: FormType) => {
-    console.log(data)
     setIsSendingMail(true)
 
     try {
@@ -23,16 +22,13 @@ export default function ContactForm() {
         body: JSON.stringify(data),
         method: 'POST',
       })
-      console.log(res, 'this is the response')
     } catch (error) {
-      console.log(error, 'this is the error')
     } finally {
       setIsSendingMail(false)
     }
   }
 
   const onSubmitFailure = (data: unknown) => {
-    console.log(data)
     setIsSendingMail(false)
   }
 
