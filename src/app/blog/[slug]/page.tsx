@@ -40,7 +40,18 @@ export async function generateMetadata({
     description: article.content.substring(0, 300),
     openGraph: {
       images: [article.image.url],
+      description: article.content.substring(0, 300),
       url: `https://lenajeremy.xyz/blog/${article.slug}`,
+      type: 'article',
+      title: article.title,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      creator: 'Jeremiah Lena',
+      description: article.content.substring(0, 300),
+      images: [article.image.url],
+      title: article.title,
+      site: 'lenajeremy.xyz',
     },
   }
 }

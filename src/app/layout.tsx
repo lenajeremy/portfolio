@@ -6,11 +6,22 @@ export const metadata: Metadata = {
   title: 'Jeremiah Lena',
   description:
     'Jeremiah Lena is a frontend engineer who creates solutions by using the latest technologies to develop easy-to-use, visually appealing and engaging websites.',
-    openGraph: {
-      images: ['/me.jpg'],
-      url: 'https://www.lenajeremy.xyz',
-      username: 'Jeremiah Lena',
-    }
+  openGraph: {
+    images: ['_next/image?url=%2Fme.jpg&w=500&q=500'],
+    url: 'https://www.lenajeremy.xyz',
+    username: 'Jeremiah Lena',
+    type: 'profile',
+    title: 'Jeremiah Lena',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    creator: 'Jeremiah Lena',
+    description:
+      'Jeremiah Lena is a frontend engineer who creates solutions by using the latest technologies to develop easy-to-use, visually appealing and engaging websites.',
+    images: ['_next/image?url=%2Fme.jpg&w=500&q=500'],
+    title: 'Jeremiah Lena',
+    site: 'lenajeremy.xyz',
+  },
 }
 
 export default function RootLayout({
