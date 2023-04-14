@@ -45,8 +45,6 @@ function AnimatedCursorText({ texts, as }: AnimatedCursorTextProps) {
 
       if (!newText) {
         clearInterval(deletionInterval)
-        console.log(deletionInterval)
-        console.log('interval should be cleared')
         let nextTextIndex = initialTextIndex++ % texts.length
         currentText = texts[nextTextIndex]
 
@@ -84,7 +82,7 @@ function AnimatedCursorText({ texts, as }: AnimatedCursorTextProps) {
   return (
     <div style={{ display: 'inline' }}>
       <span ref={animatedText}>{_currentText}</span>
-      <span id={styles.cursor}>|</span>
+      <span id={styles.cursor}></span>
     </div>
   )
 }

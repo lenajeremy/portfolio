@@ -101,9 +101,7 @@
   justify-content: center;
   flex-direction: column;
 
-  > div:nth-child(2) {
-    display: flex;
-    gap: 20px;
+  > p {
     margin-top: 8px;
   }
 
