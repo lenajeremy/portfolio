@@ -14,11 +14,21 @@ export default function ContactForm() {
 
   const [isSendingMail, setIsSendingMail] = React.useState<boolean>(false)
 
-  const onSubmitSuccess = (data: FormType) => {
+  const onSubmitSuccess = async (data: FormType) => {
     console.log(data)
     setIsSendingMail(true)
 
-    setTimeout(() => setIsSendingMail(false), 2000)
+    try {
+      const res = await fetch('/send-mail', {
+        body: JSON.stringify(data),
+        method: 'POST',
+      })
+      console.log(res, 'this is the response')
+    } catch (error) {
+      console.log(error, 'this is the error')
+    } finally {
+      setIsSendingMail(false)
+    }
   }
 
   const onSubmitFailure = (data: unknown) => {
@@ -27,10 +37,7 @@ export default function ContactForm() {
   }
 
   return (
-    <form
-      onSubmit={handleSubmit(onSubmitSuccess, onSubmitFailure)}
-      className={styles.contactForm}
-    >
+    <form className={styles.contactForm}>
       <div className={styles.inputContainer}>
         <input
           className={styles.input}
@@ -54,7 +61,14 @@ export default function ContactForm() {
           <LoadingAnimation width={24} height={24} />
         </div>
       ) : (
-        <input className={styles.input} type="submit" value={'Submit'} />
+        <button
+          className={`${styles.input} ${styles.submitbutton}`}
+          type="submit"
+          value={'Submit'}
+          onClick={handleSubmit(onSubmitSuccess, onSubmitFailure)}
+        >
+          Submit
+        </button>
       )}
     </form>
   )

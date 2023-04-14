@@ -1,28 +1,50 @@
 .ctaContainer {
-    display: flex;
-    gap: 16px;
-  
-    .cta {
-      padding: 12px 24px;
-      border: 1px solid rgb(var(--border-color-rgb));
-      border-radius: 6px;
-      transition: border-color 400ms ease-in-out;
-      font-weight: 500;
-      line-height: initial!important;
-  
-      &:hover {
-        --border-color-rgb: 51, 51, 51;
-      }
-    }
-  
-    .ctaAbout {
-      background-color: rgb(var(--sidebar-background-rgb));
-    }
-  
-    .ctaEmail {
-      background-color: transparent;
-      cursor: pointer;
-      font-size: var(--default-font-size);
+  display: flex;
+  gap: 16px;
+
+  .cta {
+    padding: 12px 24px;
+    border: 1px solid rgb(var(--border-color-rgb));
+    border-radius: 6px;
+    transition: border-color 400ms ease-in-out;
+    font-weight: 500;
+    line-height: initial !important;
+
+    &:hover {
+      --border-color-rgb: 51, 51, 51;
     }
   }
-  
+
+  .ctaAbout {
+    background-color: rgb(var(--sidebar-background-rgb));
+  }
+
+  .ctaEmail {
+    background-color: transparent;
+    cursor: pointer;
+    font-size: var(--default-font-size);
+
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    > div {
+      overflow-y: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 16px;
+    }
+
+    .emailTextContainer {
+      transform: translateY(0px);
+      transition: transform 350ms ease-in;
+      will-change: transform;
+    }
+
+    &.copied {
+      .emailTextContainer {
+        transform: translateY(-16px);
+      }
+    }
+  }
+}
