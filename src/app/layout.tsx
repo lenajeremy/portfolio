@@ -7,7 +7,9 @@ export const metadata: Metadata = {
   description:
     'Jeremiah Lena is a frontend engineer who creates solutions by using the latest technologies to develop easy-to-use, visually appealing and engaging websites.',
   openGraph: {
-    images: ['_next/image?url=%2Fme.jpg&w=500&q=500'],
+    images: [
+      'https://cdn.sanity.io/images/8nimll87/production/373734e57d6e45220ba5ac02a0a6d5584911f3c5-2316x3088.jpg',
+    ],
     url: 'https://www.lenajeremy.xyz',
     username: 'Jeremiah Lena',
     type: 'profile',
@@ -18,7 +20,9 @@ export const metadata: Metadata = {
     creator: 'Jeremiah Lena',
     description:
       'Jeremiah Lena is a frontend engineer who creates solutions by using the latest technologies to develop easy-to-use, visually appealing and engaging websites.',
-    images: ['_next/image?url=%2Fme.jpg&w=500&q=500'],
+    images: [
+      'https://cdn.sanity.io/images/8nimll87/production/373734e57d6e45220ba5ac02a0a6d5584911f3c5-2316x3088.jpg',
+    ],
     title: 'Jeremiah Lena',
     site: 'lenajeremy.xyz',
   },
