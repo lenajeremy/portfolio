@@ -5,10 +5,43 @@ import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRenderer } from '@/app/_components'
 import ImageClient from '@/app/_components/ImageClient'
 import styles from './blogpage.module.scss'
+import { Metadata } from 'next'
 
 type PageProps = {
   params: {
     slug: string
+  }
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string }
+}): Promise<Metadata> {
+  const article = await client.fetch(`
+    *[_type == 'article' && slug.current == '${params.slug}']{
+        content,
+        title,
+        "image": *[_id == ^.coverImage.asset._ref][0]{
+          "blurred": metadata.lqip,
+            url,
+        },
+        "slug": slug.current,
+        "createdAt": _createdAt,
+        "tags": tags[]{
+          "id": _ref,
+          "tagName": *[_type == 'tag' && _id == ^._ref][0].name
+        }
+    }[0]
+    `)
+
+  return {
+    title: article.title,
+    description: article.content.substring(0, 300),
+    openGraph: {
+      images: [article.image.url],
+      url: `https://lenajeremy.xyz/blog/${article.slug}`,
+    },
   }
 }
 
@@ -52,7 +85,7 @@ export default async function ArticlePage(props: PageProps) {
           height: 'false',
           borderRadius: 6,
           marginTop: '3rem',
-          marginBottom: '2rem'
+          marginBottom: '2rem',
         }}
       />
       <MDXRenderer
