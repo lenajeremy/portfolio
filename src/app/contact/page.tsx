@@ -18,7 +18,7 @@ export default function ContactPage() {
       </div>
 
       <div className={styles.contactSection}>
-        <h4>Send us a message</h4>
+        <h4>Drop a message</h4>
         <ContactForm />
       </div>
     </div>

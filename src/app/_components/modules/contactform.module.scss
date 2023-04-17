@@ -33,6 +33,8 @@
   .textarea {
     grid-column-start: 1;
     grid-column-end: 2;
+
+    resize: vertical;
   }
 
   .submitbutton {
