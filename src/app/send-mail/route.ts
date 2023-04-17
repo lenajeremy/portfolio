@@ -22,7 +22,7 @@ export async function POST(request: NextRequest, response: NextResponse) {
                             Name: "Jeremiah Lena"
                         }
                     ],
-                    Subject: "Message from " + data.name,
+                    Subject: "Message from " + data.name (data.email),
                     TextPart: data.message,
                 }
             ]
